@@ -1,0 +1,38 @@
+.flex-section {
+    @include flexbox;
+    @include flex-flow(row nowrap);
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include align-content(stretch);
+
+    height: 100%;
+    width: 100%;
+
+    .one-whole {
+        width: 100%;
+    }
+
+    .one-half {
+        width: 50%;
+    }
+
+    .one-quarter {
+        width: 25%;
+    }
+
+    &.vertical {
+        @include flex-flow(column nowrap);
+
+        .one-whole {
+            height: 100%;
+        }
+
+        .one-half {
+            height: 50%;
+        }
+
+        .one-quarter {
+            height: 25%;
+        }
+    }
+}
