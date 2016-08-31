@@ -15,7 +15,7 @@
 }
 
 .stories {
-    background:  $purple url(../images/groups/stories/word-bubble-3.svg) no-repeat fixed 48vw -16vh;
+    background: $purple url(../images/groups/stories/word-bubble-3.svg) no-repeat fixed 48vw -16vh;
 
     &__card {
         margin: 1rem;
@@ -43,7 +43,7 @@
 }
 
 .social {
-    background: $green;
+    background: $green url(../images/groups/social/hashtag.svg) no-repeat fixed -8vw 16vh;
 }
 
 .why {

@@ -404,7 +404,7 @@ $MIXINS
       color: white; }
 
 .social {
-  background: #a8c837; }
+  background: #a8c837 url(../images/groups/social/hashtag.svg) no-repeat fixed -8vw 16vh; }
 
 .why {
   background: #ebebeb;
