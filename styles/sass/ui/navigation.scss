@@ -4,6 +4,8 @@
     height: 20vh;
     width: 33%;
 
+    text-align: center;
+
     @include grid-media-query("palm") {
         display: none;
     }
