@@ -375,8 +375,7 @@ $MIXINS
   max-width: 90vw; }
 
 .stories {
-  background: #831c54;
-  background-image: url(../images/groups/stories/word-bubble-1.svg), none; }
+  background: #831c54 url(../images/groups/stories/word-bubble-3.svg) no-repeat fixed 48vw -16vh; }
   .stories__card-wrapper {
     padding: 1em; }
   .stories__card {

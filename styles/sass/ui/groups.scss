@@ -15,8 +15,7 @@
 }
 
 .stories {
-    background: $purple;
-    background-image: url(../images/groups/stories/word-bubble-1.svg), none;
+    background:  $purple url(../images/groups/stories/word-bubble-3.svg) no-repeat fixed 48vw -16vh;
 
     &__card-wrapper {
         padding: 1em;
