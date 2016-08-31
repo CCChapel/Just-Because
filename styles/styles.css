@@ -263,6 +263,17 @@ td {
     width: 50%; }
   .flex-section .one-quarter {
     width: 25%; }
+  .flex-section:not(.vertical) > * {
+    margin-right: 20px; }
+    .flex-section:not(.vertical) > *:last-child {
+      margin-right: 0; }
+  .flex-section.no-gutter > * {
+    margin-right: 0; }
+  .flex-section.wrap {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
   .flex-section.vertical {
     -webkit-flex-flow: column nowrap;
     -moz-flex-flow: column nowrap;
@@ -330,10 +341,17 @@ $MIXINS
 .content-wrapper {
   padding: 4rem; }
 
+.full-height {
+  height: 100%; }
+
+.half-height {
+  height: 50%; }
+
 .nav-icons {
   padding: 1rem;
   height: 20vh;
-  width: 33%; }
+  width: 33%;
+  text-align: center; }
   @media only screen and (max-width: 480px) {
     .nav-icons {
       display: none; } }
@@ -359,6 +377,16 @@ $MIXINS
 .stories {
   background: #831c54;
   background-image: url(../images/groups/stories/word-bubble-1.svg), none; }
+  .stories__card-wrapper {
+    padding: 1em; }
+  .stories__card {
+    padding: 1em; }
+    .stories__card.white {
+      background: white; }
+    .stories__card.green {
+      background: #a8c837; }
+    .stories__card.blue {
+      background: #64c5db; }
 
 .social {
   background: #a8c837; }
@@ -378,5 +406,8 @@ $MIXINS
 body {
   font-family: Raleway, Calibri, Arial, sans serif;
   color: white; }
+
+.bold {
+  font-weight: 800; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -17,6 +17,26 @@
 .stories {
     background: $purple;
     background-image: url(../images/groups/stories/word-bubble-1.svg), none;
+
+    &__card-wrapper {
+        padding: 1em;
+    }
+
+    &__card {
+        padding: 1em;
+
+        &.white {
+            background: $white;
+        }
+
+        &.green {
+            background: $green;
+        }
+
+        &.blue {
+            background: $blue;
+        }
+    }
 }
 
 .social {
