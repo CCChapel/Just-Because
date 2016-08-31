@@ -17,23 +17,27 @@
 .stories {
     background:  $purple url(../images/groups/stories/word-bubble-3.svg) no-repeat fixed 48vw -16vh;
 
-    &__card-wrapper {
-        padding: 1em;
-    }
-
     &__card {
-        padding: 1em;
+        margin: 1rem;
+        padding: 1rem;
+
+        @include flexbox;
+        @include flex-flow(column nowrap);
+        @include justify-content(center);
 
         &.white {
             background: $white;
+            color: $green;
         }
 
         &.green {
             background: $green;
+            color: $white;
         }
 
         &.blue {
             background: $blue;
+            color: $white;
         }
     }
 }

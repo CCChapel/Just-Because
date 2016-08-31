@@ -2,7 +2,7 @@
     position: relative;
     
     padding-left: 0;
-    margin-left: 24px;
+    //margin-left: 24px;
 
     & > div {
         position:  absolute;
@@ -18,5 +18,9 @@
         content: "";
         display: block;
         margin-top: 100%; /* initial ratio of 1:1*/
+    }
+
+    &.ratio2_1:before{
+        margin-top: 50%;
     }
 }

@@ -376,16 +376,32 @@ $MIXINS
 
 .stories {
   background: #831c54 url(../images/groups/stories/word-bubble-3.svg) no-repeat fixed 48vw -16vh; }
-  .stories__card-wrapper {
-    padding: 1em; }
   .stories__card {
-    padding: 1em; }
+    margin: 1rem;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -moz-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center; }
     .stories__card.white {
-      background: white; }
+      background: white;
+      color: #a8c837; }
     .stories__card.green {
-      background: #a8c837; }
+      background: #a8c837;
+      color: white; }
     .stories__card.blue {
-      background: #64c5db; }
+      background: #64c5db;
+      color: white; }
 
 .social {
   background: #a8c837; }
@@ -393,6 +409,24 @@ $MIXINS
 .why {
   background: #ebebeb;
   color: #363636; }
+
+.square {
+  position: relative;
+  padding-left: 0; }
+  .square > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: inherit; }
+  .square:before {
+    content: "";
+    display: block;
+    margin-top: 100%;
+    /* initial ratio of 1:1*/ }
+  .square.ratio2_1:before {
+    margin-top: 50%; }
 
 .cta {
   border: #a8c837 solid 8px;
@@ -408,5 +442,16 @@ body {
 
 .bold {
   font-weight: 800; }
+
+h1 {
+  font-weight: 800;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #363636; }
 
 /*# sourceMappingURL=styles.css.map */
