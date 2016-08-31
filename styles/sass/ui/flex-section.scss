@@ -20,6 +20,18 @@
         width: 25%;
     }
 
+    &:not(.vertical) > * {
+        margin-right: $gutter;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &.no-gutter > * {
+        margin-right: 0;
+    }
+
     &.wrap {
         @include flex-wrap(wrap);
     }
