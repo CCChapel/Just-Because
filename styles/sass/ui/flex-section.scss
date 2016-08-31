@@ -20,6 +20,10 @@
         width: 25%;
     }
 
+    &.wrap {
+        @include flex-wrap(wrap);
+    }
+
     &.vertical {
         @include flex-flow(column nowrap);
 
