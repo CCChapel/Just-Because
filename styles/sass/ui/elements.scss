@@ -1,6 +1,8 @@
 .cta {
+    display: inline-block;
+    
     border: $green solid $typecsset-magic-number / 3;
-    padding: 1em;
+    padding: 1rem;
 
     color: $white;
     font-weight: 800;

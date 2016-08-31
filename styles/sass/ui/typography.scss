@@ -7,14 +7,22 @@ body {
     font-weight: 800;
 }
 
-h1 {
-    font-weight: 800;
+.uppercase {
     text-transform: uppercase;
 }
 
-h2 {
-    @include typecsset-font-size(24px);
-    
-    text-transform: uppercase;
+.text-black {
     color: $black;
+}
+
+.large-text {
+    @include typecsset-font-size($font-size-large);
+}
+
+.normal-text {
+    @include typecsset-font-size($font-size-normal);
+}
+
+.small-text {
+    @include typecsset-font-size($font-size-small);
 }
