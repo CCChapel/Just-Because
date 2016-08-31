@@ -23,16 +23,19 @@
     &.vertical {
         @include flex-flow(column nowrap);
 
-        .one-whole {
-            height: 100%;
-        }
+        // .one-whole {
+        //     height: 100%;
+        //     width: inherit;
+        // }
 
-        .one-half {
-            height: 50%;
-        }
+        // .one-half {
+        //     height: 50%;
+        //     width: inherit;
+        // }
 
-        .one-quarter {
-            height: 25%;
-        }
+        // .one-quarter {
+        //     height: 25%;
+        //     width: inherit;
+        // }
     }
 }

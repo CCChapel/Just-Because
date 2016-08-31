@@ -1,5 +1,12 @@
 .nav-icons {
+    padding: 1rem;
+
+    height: 33vh;
     width: 33%;
+
+    @include grid-media-query("palm") {
+        display: none;
+    }
 
     ul {
         margin-left: 0;
@@ -10,4 +17,8 @@
             width: 32%;
         }
     }
+}
+
+.nav-icon {
+    width: 8vmin;
 }
