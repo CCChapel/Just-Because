@@ -23,6 +23,10 @@
     &.vertical {
         @include flex-flow(column nowrap);
 
+        &.center {
+            @include justify-content(center);
+        }
+
         // .one-whole {
         //     height: 100%;
         //     width: inherit;

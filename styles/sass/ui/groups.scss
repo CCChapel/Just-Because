@@ -1,6 +1,15 @@
+.group-title {
+    max-width: 50%;
+}
+
 .video {
     .logo {
-        height: 66vh;
+        height: 40vh;
+        max-width: 90vw;
+    }
+
+    .play-button {
+        height: 40vh;
         max-width: 90vw;
     }
 }
