@@ -11,6 +11,9 @@
 
     @include grid-media-query("palm") {
         padding: 3rem 10px;
+
+        max-width: 100vw;
+        overflow-x: hidden;
     }
 }
 
