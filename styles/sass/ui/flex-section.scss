@@ -58,12 +58,14 @@
         //     width: inherit;
         // }
     }
-    
-    .palm--stack {
-        @include flex-direction(column);
+        
+    @include grid-media-query("palm") {
+        &.palm--stack {
+            @include flex-direction(column);
 
-        &.reverse {
-            @include flex-direction(column-reverse);
+            &.reverse {
+                @include flex-direction(column-reverse);
+            }
         }
     }
 }

@@ -231,6 +231,52 @@ th,
 td {
   padding: 12px; }
 
+/*------------------------------------*\
+$MIXINS
+\*------------------------------------*/
+/**
+* Define your breakpoints. The first value is the prefix that shall be used for
+* your classes (e.g. `.palm--one-half`), the second value is the media query
+* that the breakpoint fires at.
+*/
+/**
+* These mixins are for the library to use only, you should not need to modify
+* them at all.
+*
+* Enclose a block of code with a media query as named in `$breakpoints`.
+*/
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective-origin-x: 100%; }
+  .parallax__group {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d; }
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-perspective-origin: 100%;
+    perspective-origin-x: 100%; }
+    .parallax__layer--fore {
+      transform: translateZ(0);
+      z-index: 1; }
+    .parallax__layer--base {
+      transform: translateZ(0);
+      z-index: 4; }
+    .parallax__layer--back {
+      transform: translateZ(-1px) scale(2);
+      z-index: 3;
+      left: -8px; }
+    .parallax__layer--deep {
+      transform: translateZ(-600px) scale(3);
+      z-index: 2; }
+
 .flex-section {
   display: -webkit-box;
   display: -webkit-flex;
@@ -285,66 +331,21 @@ td {
       -webkit-justify-content: center;
       -moz-justify-content: center;
       justify-content: center; }
-  .flex-section .palm--stack {
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    .flex-section .palm--stack.reverse {
-      -webkit-box-direction: reverse;
+  @media only screen and (max-width: 480px) {
+    .flex-section.palm--stack {
+      -webkit-box-direction: normal;
       -webkit-box-orient: vertical;
-      -webkit-flex-direction: column-reverse;
-      -moz-flex-direction: column-reverse;
-      -ms-flex-direction: column-reverse;
-      flex-direction: column-reverse; }
-
-/*------------------------------------*\
-$MIXINS
-\*------------------------------------*/
-/**
-* Define your breakpoints. The first value is the prefix that shall be used for
-* your classes (e.g. `.palm--one-half`), the second value is the media query
-* that the breakpoint fires at.
-*/
-/**
-* These mixins are for the library to use only, you should not need to modify
-* them at all.
-*
-* Enclose a block of code with a media query as named in `$breakpoints`.
-*/
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective-origin-x: 100%; }
-  .parallax__group {
-    position: relative;
-    height: 100%;
-    transform-style: preserve-3d; }
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    -webkit-perspective-origin: 100%;
-    perspective-origin-x: 100%; }
-    .parallax__layer--fore {
-      transform: translateZ(0);
-      z-index: 1; }
-    .parallax__layer--base {
-      transform: translateZ(0);
-      z-index: 4; }
-    .parallax__layer--back {
-      transform: translateZ(-1px) scale(2);
-      z-index: 3;
-      left: -8px; }
-    .parallax__layer--deep {
-      transform: translateZ(-600px) scale(3);
-      z-index: 2; }
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .flex-section.palm--stack.reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column-reverse;
+        -moz-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; } }
 
 .object-cover {
   object-fit: cover;

@@ -7,7 +7,6 @@
 //@import "includes/csswizardry-grids";
 @import "includes/flexbox";
 @import "includes/typecsset";
-@import "ui/flex-section";
 
 //Create Functionality
 @import "includes/mixins";
@@ -15,6 +14,7 @@
 
 //UI
 @import "ui/parallax";
+@import "ui/flex-section";
 @import "ui/positioning";
 @import "ui/navigation";
 @import "ui/groups";
