@@ -303,11 +303,14 @@ $MIXINS
   align-content: stretch;
   height: 100%;
   width: 100%; }
-  .flex-section .one-whole {
+  .flex-section .one-whole,
+  .flex-section .palm--one-whole {
     width: 100%; }
-  .flex-section .one-half {
+  .flex-section .one-half,
+  .flex-section .palm--one-half {
     width: 50%; }
-  .flex-section .one-quarter {
+  .flex-section .one-quarter,
+  .flex-section .palm--one-quarter {
     width: 25%; }
   .flex-section:not(.vertical) > * {
     margin-right: 20px; }
@@ -355,6 +358,9 @@ $MIXINS
 
 .content-wrapper {
   padding: 4rem; }
+  @media only screen and (max-width: 480px) {
+    .content-wrapper {
+      padding: 1rem 10px; } }
 
 .full-height {
   height: 100%; }

@@ -8,15 +8,18 @@
     height: 100%;
     width: 100%;
 
-    .one-whole {
+    .one-whole,
+    .palm--one-whole {
         width: 100%;
     }
 
-    .one-half {
+    .one-half,
+    .palm--one-half {
         width: 50%;
     }
 
-    .one-quarter {
+    .one-quarter,
+    .palm--one-quarter {
         width: 25%;
     }
 
