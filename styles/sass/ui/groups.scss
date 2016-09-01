@@ -17,6 +17,11 @@
 .stories {
     background: $purple url(../images/groups/stories/word-bubble-3.svg) no-repeat fixed 48vw -16vh;
 
+    //TO DO: Use device class
+    @include grid-media-query("palm") {
+        background-attachment: scroll;
+    }
+
     &__card {
         margin: 1rem;
         padding: 1rem;
@@ -45,6 +50,11 @@
 .social {
     background: $blue url(../images/groups/social/hashtag.svg) no-repeat fixed 16vw 0;
     background-size: 50vh 50vw;
+    
+    //TO DO: Use device class
+    @include grid-media-query("palm") {
+        background-attachment: scroll;
+    }
 }
 
 .why {
