@@ -80,6 +80,10 @@
             &.reverse {
                 @include flex-direction(column-reverse);
             }
+
+            & > * {
+                margin-right: 0;
+            }
         }
     }
 }
