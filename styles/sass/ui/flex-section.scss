@@ -8,19 +8,30 @@
     height: 100%;
     width: 100%;
 
-    .one-whole,
-    .palm--one-whole {
+    .one-whole {
         width: 100%;
     }
 
-    .one-half,
-    .palm--one-half {
+    .one-half {
         width: 50%;
     }
 
-    .one-quarter,
-    .palm--one-quarter {
+    .one-quarter {
         width: 25%;
+    }
+
+    @include grid-media-query("palm") {
+        .palm--one-whole {
+            width: 100%;
+        }
+
+        .palm--one-half {
+            width: 50%;
+        }
+
+        .palm--one-quarter {
+            width: 25%;
+        }
     }
 
     &:not(.vertical) > * {
