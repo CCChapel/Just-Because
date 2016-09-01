@@ -1,6 +1,6 @@
 .parallax {
     //Switch to device class
-    @include grid-media-query("desktop") {
+    @include grid-media-query("desk") {
         perspective: 1px;
 
         height: 100vh;
