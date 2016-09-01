@@ -285,6 +285,20 @@ td {
       -webkit-justify-content: center;
       -moz-justify-content: center;
       justify-content: center; }
+  .flex-section .palm--stack {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .flex-section .palm--stack.reverse {
+      -webkit-box-direction: reverse;
+      -webkit-box-orient: vertical;
+      -webkit-flex-direction: column-reverse;
+      -moz-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; }
 
 /*------------------------------------*\
 $MIXINS

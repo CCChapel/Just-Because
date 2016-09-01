@@ -58,4 +58,12 @@
         //     width: inherit;
         // }
     }
+    
+    .palm--stack {
+        @include flex-direction(column);
+
+        &.reverse {
+            @include flex-direction(column-reverse);
+        }
+    }
 }
