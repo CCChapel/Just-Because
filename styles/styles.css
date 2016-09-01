@@ -245,6 +245,12 @@ $MIXINS
 *
 * Enclose a block of code with a media query as named in `$breakpoints`.
 */
+@media only screen and (min-width: 1024px) {
+  .desk--hide {
+    display: none; } }
+@media only screen and (max-width: 480px) {
+  .palm--hide {
+    display: none; } }
 .flex-section {
   display: -webkit-box;
   display: -webkit-flex;
