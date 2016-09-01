@@ -6,10 +6,6 @@
 
     text-align: center;
 
-    @include grid-media-query("palm") {
-        display: none;
-    }
-
     ul {
         margin-left: 0;
 

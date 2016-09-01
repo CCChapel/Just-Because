@@ -386,9 +386,6 @@ $MIXINS
   height: 20vh;
   width: 33%;
   text-align: center; }
-  @media only screen and (max-width: 480px) {
-    .nav-icons {
-      display: none; } }
   .nav-icons ul {
     margin-left: 0; }
     .nav-icons ul li {
