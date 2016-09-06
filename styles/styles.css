@@ -409,9 +409,6 @@ $MIXINS
 
 .stories {
   background: #831c54 url(../images/groups/stories/word-bubble-3.svg) no-repeat scroll 48vw -16vh; }
-  @media only screen and (max-width: 480px) {
-    .stories {
-      background-attachment: scroll; } }
   .stories__card {
     margin: 1rem;
     padding: 1rem;
@@ -442,9 +439,6 @@ $MIXINS
 .social {
   background: #64c5db url(../images/groups/social/hashtag.svg) no-repeat scroll 16vw 0;
   background-size: 50vh 50vw; }
-  @media only screen and (max-width: 480px) {
-    .social {
-      background-attachment: scroll; } }
 
 .why {
   background: #ebebeb;
