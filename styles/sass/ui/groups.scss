@@ -15,7 +15,7 @@
 }
 
 .stories {
-    background: $purple url(../images/groups/stories/word-bubble-3.svg) no-repeat fixed 48vw -16vh;
+    background: $purple url(../images/groups/stories/word-bubble-3.svg) no-repeat scroll 48vw -16vh;
 
     //TO DO: Use device class
     @include grid-media-query("palm") {
@@ -48,7 +48,7 @@
 }
 
 .social {
-    background: $blue url(../images/groups/social/hashtag.svg) no-repeat fixed 16vw 0;
+    background: $blue url(../images/groups/social/hashtag.svg) no-repeat scroll 16vw 0;
     background-size: 50vh 50vw;
     
     //TO DO: Use device class
