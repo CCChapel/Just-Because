@@ -316,6 +316,13 @@ $MIXINS
     width: 50%; }
   .flex-section .one-quarter {
     width: 25%; }
+  @media only screen and (max-width: 1023px) {
+    .flex-section .portable--one-whole {
+      width: 100%; }
+    .flex-section .portable--one-half {
+      width: 50%; }
+    .flex-section .portable--one-quarter {
+      width: 25%; } }
   @media only screen and (max-width: 480px) {
     .flex-section .palm--one-whole {
       width: 100%; }
