@@ -502,9 +502,10 @@ body {
 .tagboard-embed {
   margin: 0 auto;
   height: 95vh;
-  max-width: 40vw; }
-  @media only screen and (max-width: 1023px) {
-    .tagboard-embed {
-      max-width: 100%; } }
+    /*max-width: 40vw;
+
+    @include grid-media-query("portable") {
+        max-width: 100%;
+    }*/ }
 
 /*# sourceMappingURL=styles.css.map */
