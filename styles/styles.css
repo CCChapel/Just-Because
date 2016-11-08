@@ -500,6 +500,7 @@ body {
   line-height: 1.2; }
 
 .tagboard-embed {
+  margin: 0 auto;
   height: 95vh;
   max-width: 40vw; }
   @media only screen and (max-width: 1023px) {
