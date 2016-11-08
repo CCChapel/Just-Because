@@ -345,7 +345,7 @@ $MIXINS
       -webkit-justify-content: center;
       -moz-justify-content: center;
       justify-content: center; }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 1023px) {
     .flex-section.palm--stack {
       -webkit-box-direction: normal;
       -webkit-box-orient: vertical;
