@@ -1,0 +1,8 @@
+.tagboard-embed {
+    height: 95vh;
+    max-width: 40vw;
+
+    @include grid-media-query("portable") {
+        max-width: 100%;
+    }
+}
