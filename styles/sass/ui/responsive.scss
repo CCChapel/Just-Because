@@ -4,6 +4,11 @@
     }   
 }
 
+@include grid-media-query("portable") {
+    .portable--hide {
+        display: none;
+    }
+}
 
 @include grid-media-query("palm") {
     .palm--hide {
