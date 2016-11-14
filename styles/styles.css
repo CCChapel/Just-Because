@@ -315,6 +315,8 @@ $MIXINS
   width: 100%; }
   .flex-section .one-whole {
     width: 100%; }
+  .flex-section .two-thirds {
+    width: 66%; }
   .flex-section .one-half {
     width: 50%; }
   .flex-section .one-third {
@@ -324,6 +326,8 @@ $MIXINS
   @media only screen and (max-width: 1023px) {
     .flex-section .portable--one-whole {
       width: 100%; }
+    .flex-section .portable--two-thirds {
+      width: 66%; }
     .flex-section .portable--one-half {
       width: 50%; }
     .flex-section .portable--one-third {
@@ -333,6 +337,8 @@ $MIXINS
   @media only screen and (max-width: 480px) {
     .flex-section .palm--one-whole {
       width: 100%; }
+    .flex-section .palm--two-thirds {
+      width: 66%; }
     .flex-section .palm--one-half {
       width: 50%; }
     .flex-section .palm--one-third {

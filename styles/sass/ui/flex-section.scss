@@ -12,6 +12,10 @@
         width: 100%;
     }
 
+    .two-thirds {
+        width: 66%;
+    }
+
     .one-half {
         width: 50%;
     }
@@ -27,6 +31,10 @@
     @include grid-media-query("portable") {
         .portable--one-whole {
             width: 100%;
+        }
+
+        .portable--two-thirds {
+            width: 66%;
         }
 
         .portable--one-half {
@@ -45,6 +53,10 @@
     @include grid-media-query("palm") {
         .palm--one-whole {
             width: 100%;
+        }
+
+        .palm--two-thirds {
+            width: 66%;
         }
 
         .palm--one-half {
