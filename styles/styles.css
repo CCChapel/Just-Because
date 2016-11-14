@@ -317,6 +317,8 @@ $MIXINS
     width: 100%; }
   .flex-section .one-half {
     width: 50%; }
+  .flex-section .one-third {
+    width: 33%; }
   .flex-section .one-quarter {
     width: 25%; }
   @media only screen and (max-width: 1023px) {
@@ -324,6 +326,8 @@ $MIXINS
       width: 100%; }
     .flex-section .portable--one-half {
       width: 50%; }
+    .flex-section .portable--one-third {
+      width: 33%; }
     .flex-section .portable--one-quarter {
       width: 25%; } }
   @media only screen and (max-width: 480px) {
@@ -331,6 +335,8 @@ $MIXINS
       width: 100%; }
     .flex-section .palm--one-half {
       width: 50%; }
+    .flex-section .palm--one-third {
+      width: 33%; }
     .flex-section .palm--one-quarter {
       width: 25%; } }
   .flex-section:not(.vertical) > * {
