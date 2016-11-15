@@ -571,7 +571,8 @@ body {
   font-size: 1.25rem !important;
   margin-bottom: 0.5rem; }
 
-.fsHidden {
+.fsHidden,
+.hidden {
   display: none; }
 
 input[type="text"],
@@ -579,6 +580,7 @@ textarea {
   border: 2px solid #831c54 !important;
   border-radius: 4px;
   font-size: 1.25rem;
+  font-family: Raleway, Calibri, Arial, sans serif;
   width: 100%; }
 
 input[type="submit"] {
