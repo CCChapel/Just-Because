@@ -48,7 +48,7 @@ angular.module('storiesApp')
                             console.log(response);
                             
                             for (x in response.submissions) {
-                                console.log(x.data)
+                                console.log(x)
                             }
                             //self.stories = response.data;
                         })
