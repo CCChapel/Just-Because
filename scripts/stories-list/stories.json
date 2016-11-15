@@ -1,0 +1,36 @@
+{
+    "submissions": [
+        {
+            "id": "286660393",
+            "timestamp": "2016-11-15 09:35:46",
+            "user_agent": "Mozilla\/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko\/20100101 Firefox\/45.0",
+            "remote_addr": "40.129.6.50",
+            "payment_status": "",
+            "latitude": "41.045501708984",
+            "longitude": "-81.52660369873",
+            "read": "0"
+        },
+        {
+            "id": "286660939",
+            "timestamp": "2016-11-15 09:38:00",
+            "user_agent": "Mozilla\/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko\/20100101 Firefox\/45.0",
+            "remote_addr": "40.129.6.50",
+            "payment_status": "",
+            "latitude": "41.045501708984",
+            "longitude": "-81.52660369873",
+            "read": "0"
+        },
+        {
+            "id": "286660997",
+            "timestamp": "2016-11-15 09:38:14",
+            "user_agent": "Mozilla\/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko\/20100101 Firefox\/45.0",
+            "remote_addr": "40.129.6.50",
+            "payment_status": "",
+            "latitude": "41.045501708984",
+            "longitude": "-81.52660369873",
+            "read": "0"
+        }
+    ],
+    "total": 3,
+    "pages": 1
+}
