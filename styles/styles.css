@@ -542,6 +542,45 @@ body {
   height: 100vh;
   width: 100vw; }
 
+.fsBody .fsForm {
+  background-color: transparent !important; }
+
+.fsBody.fsEmbed {
+  margin: 0 auto; }
+  @media only screen and (max-width: 1023px) {
+    .fsBody.fsEmbed {
+      max-width: 90%; } }
+
+.fsBody .fsForm .fsLabel, .fsBody .fsForm .fsOptionLabel, .fsBody .fsForm .fsMatrix th, .fsBody .fsForm .fsMatrixLabel {
+  color: #FFF !important; }
+
+.fsBody .fsForm .fsLabel {
+  display: block;
+  color: #a8c837 !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 0.5rem; }
+
+.fsHidden {
+  display: none; }
+
+input[type="text"],
+textarea {
+  border: 2px solid #831c54 !important;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  width: 100%; }
+
+input[type="submit"] {
+  background: #831c54;
+  border: 2px solid #831c54 !important;
+  border-radius: 4px;
+  padding: .25rem;
+  color: #FFF;
+  font-size: 1.25rem; }
+
+.fs-ngdialog {
+  display: none; }
+
 .tagboard-embed {
   margin: 0 auto;
   /*height: 95vh;*/
