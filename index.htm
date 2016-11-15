@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app="storiesApp">
 <head lang="en">
     <!-- #METADATA -->
     <title>CCChapel Wireframe</title>
@@ -24,9 +24,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800"> 
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
 
-<body>
+<body ng-controller="StoriesController">
     <div class="parallax">
         <div class="video parallax__group">
             <div class="parallax__layer parallax__layer--base">
@@ -95,6 +99,7 @@
                                     <div class="large-text bold uppercase">Story 1</div>
 
                                     <div class="small-text uppercase text-black">From {NAME}</div>
+                                    <stories-list></stories-list>
                                 </div>
                             </div>
 
@@ -186,9 +191,5 @@
             </div>
         </div>
     </div>
-
-    <!-- JAVASCRIPT -->
-    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
-    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
 </body>
 </html> 
