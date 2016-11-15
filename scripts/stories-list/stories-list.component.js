@@ -33,8 +33,8 @@ angular.module('storiesApp')
                 var self = this;
 		        self.stories = new Array();
                 
-		        var url = 'scripts/stories-list/stories.json';
-                //var url = 'https://www.formstack.com/api/v2/form/2530077/submission.json?data=true&oauth_token=16559620d4a936952cde88ee1070a6cc';
+		        //var url = 'scripts/stories-list/stories.json';
+                var url = 'https://www.formstack.com/api/v2/form/2530077/submission.json?data=true&oauth_token=16559620d4a936952cde88ee1070a6cc';
 
                 //Field IDs
                 var nameField = 47415896;
@@ -43,8 +43,7 @@ angular.module('storiesApp')
 
                 //Get Submissions
                 var submissions = new Array();
-                $http.get(url)
-                     .success(
+                $http.jsonp(url, { jsonCallbackParam: 'callback' }).then(
                         function successCallback(response) {
                             console.log("SUCCESS");
                             
@@ -63,8 +62,7 @@ angular.module('storiesApp')
 			    });
 
                             
-                        })
-                     .error(
+                        },
                         function errorCallback(response) {
                             console.log("ERROR");
                             console.log(response);
