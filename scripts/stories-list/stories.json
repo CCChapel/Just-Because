@@ -27,6 +27,12 @@
                     "label": "Your Story",
                     "type": "textarea",
                     "value": "Test Story"
+                },
+                "47423525": {
+                    "field": "47423525",
+                    "label": "Published",
+                    "type": "radio",
+                    "value": "True"
                 }
             }
         },
@@ -38,7 +44,7 @@
             "payment_status": "",
             "latitude": "41.045501708984",
             "longitude": "-81.52660369873",
-            "read": "0",
+            "read": "1",
             "data": {
                 "47415896": {
                     "field": "47415896",
@@ -57,6 +63,12 @@
                     "label": "Your Story",
                     "type": "textarea",
                     "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar risus hendrerit felis tempor facilisis. Sed bibendum lorem sit amet est tincidunt semper. Proin at ullamcorper justo. Quisque commodo vel est ac bibendum. Maecenas ullamcorper mauris vitae enim tristique luctus. Vestibulum eu feli"
+                },
+                "47423525": {
+                    "field": "47423525",
+                    "label": "Published",
+                    "type": "radio",
+                    "value": "False"
                 }
             }
         },
@@ -68,7 +80,7 @@
             "payment_status": "",
             "latitude": "41.045501708984",
             "longitude": "-81.52660369873",
-            "read": "0",
+            "read": "1",
             "data": {
                 "47415896": {
                     "field": "47415896",
@@ -87,6 +99,12 @@
                     "label": "Your Story",
                     "type": "textarea",
                     "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar risus hendrerit felis tempor facilisis. Sed bibendum lorem sit amet est tincidunt semper. Proin at ullamcorper justo. Quisque commodo vel est ac bibendum. Maecenas ullamcorper mauris vitae enim tristique luctus. Vestibulum eu feli"
+                },
+                "47423525": {
+                    "field": "47423525",
+                    "label": "Published",
+                    "type": "radio",
+                    "value": "False"
                 }
             }
         }
