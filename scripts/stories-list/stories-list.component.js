@@ -32,32 +32,30 @@ angular.module('storiesApp')
             controller: function StoriesListController($http) {
                 var self = this;
                 var url = 'scripts/stories-list/stories.json';
-                //var url = "https://www.formstack.com/api/v2/form/2530077/submission.json?oauth_token=16559620d4a936952cde88ee1070a6cc";
+                //var url = "	https://www.formstack.com/api/v2/form/2530077/submission.json?data=true&oauth_token=16559620d4a936952cde88ee1070a6cc";
 
+                //Field IDs
+                var nameField = 47415896;
+                var locationField = 47415900;
+                var storyField = 47415901;
+
+                //Get Submissions
+                var submissions = new Array();
                 $http.get(url)
                      .success(
                         function successCallback(response) {
+                            console.log("SUCCESS");
                             console.log(response);
-                            self.stories = response.data;
+                            
+                            for (x in response.submissions) {
+                                console.log(x.data)
+                            }
+                            //self.stories = response.data;
                         })
                      .error(
                         function errorCallback(response) {
                             console.log("ERROR");
                             console.log(response);
                         });
-
-                // var jqxhr = jQuery.getJSON(url, function() {
-                //     console.log("success");
-                // })
-                // .done(function() {
-                //     console.log("second success");
-                // })
-                // .fail(function(jqxhr, textStatus, error) {
-                //     var err = textStatus + ", " + error;
-                //     console.log("Request Failed: " + err);
-                // })
-                // .always(function() {
-                //     console.log("complete");
-                // });
             }
        });
