@@ -4,7 +4,10 @@ angular.module('storiesApp')
             templateUrl: 'scripts/stories-list/stories-list.template.html',
             controller: function StoriesListController($http) {
                 var self = this;
-                $http.get('scripts/stories-list/stories.json').then(function(response) {
+                //var url = 'scripts/stories-list/stories.json';
+                var url = "https://www.formstack.com/api/v2/form/2530077/submission.json?oauth_token=16559620d4a936952cde88ee1070a6cc";
+
+                $http.get(url).then(function(response) {
                     self.stories = response.data;
                 });
             }
