@@ -1,7 +1,27 @@
-<ul>
+<!--<ul>
     <li ng-repeat="story in $ctrl.stories">
         <div>{{story.name}}</div>
         <div>{{story.location}}</div>
         <div>{{story.story}}</div>
     </li>
-</ul>
+</ul>-->
+
+<!--<div class="square ratio2_1 one-whole add-bottom-margin">
+    <div class="stories__card white full-height">
+        <div class="large-text bold uppercase">Story 1</div>
+
+        <div class="small-text uppercase text-black">From {NAME}</div>
+        <stories-list></stories-list>
+    </div>
+</div>-->
+
+<div ng-repeat="story in $ctrl.stories">
+    <!--<div class="square one-half">-->
+    <div class="">
+        <!--<div class="stories__card green">-->
+        <div class="green">
+            <div class="large-text bold uppercase">{{story.story}}</div>
+            <div class="small-text uppercase text-black">From {{story.name}}</div>
+        </div>
+    </div>
+</div>
