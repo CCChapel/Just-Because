@@ -32,7 +32,7 @@ angular.module('storiesApp')
             controller: function StoriesListController($http) {
                 var self = this;
                 var url = 'scripts/stories-list/stories.json';
-                //var url = "	https://www.formstack.com/api/v2/form/2530077/submission.json?data=true&oauth_token=16559620d4a936952cde88ee1070a6cc";
+                //var url = 'https://www.formstack.com/api/v2/form/2530077/submission.json?data=true&oauth_token=16559620d4a936952cde88ee1070a6cc';
 
                 //Field IDs
                 var nameField = 47415896;
