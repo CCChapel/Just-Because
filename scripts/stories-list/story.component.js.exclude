@@ -1,0 +1,9 @@
+angular.module('storiesApp')
+       .component('storiesList', {
+            templateUrl: 'scripts/stories-list/story-list.template.html',
+            controller: function StoriesListController($http) { 
+                var self = this;
+
+                this.story = "MY TEST STORY";
+            }
+       });
