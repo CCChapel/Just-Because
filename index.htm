@@ -57,7 +57,7 @@
             </div>
         </div>
 
-        <div class="modal-close">
+        <div class="modal-close" ng-click="closeModal()">
             X
         </div>
     </div>
@@ -235,21 +235,21 @@
     </div>
 
     <script>
-        jQuery(document).ready(function() {
-            jQuery(".modal-close").click(function() {
-                jQuery(".modal").fadeOut(500);
-            });
+        // jQuery(document).ready(function() {
+        //     jQuery(".modal-close").click(function() {
+        //         jQuery(".modal").fadeOut(500);
+        //     });
 
-            jQuery("[data-modal]").click(function(e) {
-                e.preventDefault();
+        //     jQuery("[data-modal]").click(function(e) {
+        //         e.preventDefault();
 
-                //Get modal content
-                var contentID = "#" + jQuery(this).attr("data-modal");
-                jQuery(".modal").children(contentID).show();
+        //         //Get modal content
+        //         var contentID = "#" + jQuery(this).attr("data-modal");
+        //         jQuery(".modal").children(contentID).show();
 
-                jQuery(".modal").fadeIn(500);
-            });
-        });
+        //         jQuery(".modal").fadeIn(500);
+        //     });
+        // });
        
 
         // jQuery(".show-modal").click(function(e) {

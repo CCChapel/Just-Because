@@ -46,7 +46,17 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
 
     $scope.setShowStoryID = function setShowStoryID(id) {
         $scope.selectedStoryID = id;
+        $scope.openModal();
+    }
+
+    //////////////////////////////////////////////////////////
+    // MODAL FUNCTIONS
+    //////////////////////////////////////////////////////////
+    $scope.openModal = function openModal() {
         $scope.showModal = true;
-        console.log($scope.showModal);
+    }
+
+    $scope.closeModal = function closeModal() {
+        $scope.showModal = false;
     }
 });
