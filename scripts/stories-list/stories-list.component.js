@@ -44,28 +44,26 @@ angular.module('storiesApp')
                 //Get Submissions
                 var submissions = new Array();
                 $http.jsonp(url, { jsonCallbackParam: 'callback' }).then(
-                        function successCallback(response) {
-                            console.log("SUCCESS");
+                    function successCallback(response) {
+                        console.log("SUCCESS");
                             
-			    //Parse items
-			    response.submissions.forEach(function(item, index) {
-				var story = {
-					name: item.data[nameField].value,
-					location: item.data[locationField].value,
-					story: item.data[storyField].value
-				};
+                        //Parse items
+                        response.submissions.forEach(function(item, index) {
+                            var story = {
+                                name: item.data[nameField].value,
+                                location: item.data[locationField].value,
+                                story: item.data[storyField].value
+                            };
 
-				console.log(story);
+                            console.log(story);
 
-				self.stories.push(story);
-				console.log(self.stories);
-			    });
-
-                            
-                        },
-                        function errorCallback(response) {
-                            console.log("ERROR");
-                            console.log(response);
+                            self.stories.push(story);
+                            console.log(self.stories);
                         });
+                    },
+                    function errorCallback(response) {
+                        console.log("ERROR");
+                        console.log(response);
+                    });
             }
        });
