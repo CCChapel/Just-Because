@@ -26,6 +26,7 @@ angular.module('storiesApp')
                         //Parse items
                         response.data.submissions.forEach(function(item, index) {
                             var story = {
+                                id: item.id,
                                 name: item.data[nameField].value,
                                 location: item.data[locationField].value,
                                 story: item.data[storyField].value,
