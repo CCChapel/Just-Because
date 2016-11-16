@@ -35,6 +35,8 @@
     <script src="scripts/app.module.js"></script>
     <script src="scripts/stories-list/stories-list.module.js"></script>
     <script src="scripts/stories-list/stories-list.component.js"></script>
+    <script src="scripts/selected-story/selected-story.module.js"></script>
+    <script src="scripts/selected-story/selected-story.component.js"></script>
 </head>
 
 <body>
@@ -47,11 +49,7 @@
 
         <!--STORY MODAL-->
         <div id="story" class="flex-section one-whole">
-            <input type="text" ng-model="$ctrl.query" />
-
-            <div ng-repeat="story in $ctrl.stories | filter : { 'id' :  $ctrl.query }">
-                {{story.story}}
-            </div>
+            <selected-story></selected-story>
         </div>
 
         <div class="modal-close">
@@ -121,6 +119,8 @@
                 <div class="flex-section palm--stack reverse content-wrapper">
                     <div class="one-half portable--one-whole">
                         <div class="stories__cards flex-section wrap no-gutter">
+                            {{$ctrl.showStoryID}}
+            
                             <stories-list></stories-list>
                             
                             <!--<div class="square ratio2_1 one-whole add-bottom-margin">
@@ -221,19 +221,22 @@
     </div>
 
     <script>
-        jQuery(".modal-close").click(function() {
-            jQuery(".modal").fadeOut(500);
+        jQuery(document).ready(function() {
+            jQuery(".modal-close").click(function() {
+                jQuery(".modal").fadeOut(500);
+            });
+
+            jQuery("[data-modal]").click(function(e) {
+                e.preventDefault();
+
+                //Get modal content
+                var contentID = "#" + jQuery(this).attr("data-modal");
+                jQuery(".modal").children(contentID).show();
+
+                jQuery(".modal").fadeIn(500);
+            });
         });
-
-        jQuery("[data-modal]").click(function(e) {
-            e.preventDefault();
-
-            //Get modal content
-            var contentID = "#" + jQuery(this).attr("data-modal");
-            jQuery(".modal").children(contentID).show();
-
-            jQuery(".modal").fadeIn(500);
-        });
+       
 
         // jQuery(".show-modal").click(function(e) {
         //     e.preventDefault(); 

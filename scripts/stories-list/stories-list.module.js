@@ -1,2 +1,1 @@
-//Define module
-var storiesApp = angular.module('storiesApp', []);
+angular.module('storiesList', []);

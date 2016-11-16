@@ -2,7 +2,7 @@
 angular.module('storiesApp')
        .component('storiesList', {
             templateUrl: 'scripts/stories-list/stories-list.template.html',
-            controller: function StoriesListController($http) {
+            controller: function StoriesListController($http, globalVars) {
                 var self = this;
 		        self.stories = new Array();
                 
@@ -20,8 +20,8 @@ angular.module('storiesApp')
 
                 $http.get(url, { jsonCallbackParam: 'callback' }).then(
                     function successCallback(response) {
-                        console.log("SUCCESS");
-                        console.log(response);
+                        // console.log("SUCCESS");
+                        // console.log(response);
 
                         //Parse items
                         response.data.submissions.forEach(function(item, index) {
@@ -33,15 +33,25 @@ angular.module('storiesApp')
                                 published: item.data[publishedField].value || 'False'
                             };
 
-                            console.log(story);
+                            // console.log(story);
 
                             self.stories.push(story);
-                            console.log(self.stories);
+                            // console.log(self.stories);
                         });
                     },
                     function errorCallback(response) {
                         console.log("ERROR");
                         console.log(response);
                     });
+
+                // self.showStoryID = -1;
+                // self.setShowStoryID = function setShowStoryID(id) {
+                //     self.showStoryID = id;
+                //     console.log(id);
+                // }
+
+                console.log("LIST:" + globalVars.selectedStoryID);
+                globalVars.selectedStoryID = 10;
+                console.log("LIST:" + globalVars.selectedStoryID);
             }
        });
