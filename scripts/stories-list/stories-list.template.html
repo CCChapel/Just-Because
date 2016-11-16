@@ -15,7 +15,7 @@
     </div>
 </div>-->
 
-<div ng-repeat="story in $ctrl.stories">
+<div ng-repeat="story in $ctrl.stories | filter : { 'published' : 'True' }">
     <!--<div class="square one-half">-->
     <div class="">
         <!--<div class="stories__card green">-->
