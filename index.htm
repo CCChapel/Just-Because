@@ -32,14 +32,15 @@
         crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="scripts/app.module.js"></script>
+    <script src="scripts/app.js"></script>
+    <!--<script src="scripts/app.module.js"></script>
     <script src="scripts/stories-list/stories-list.module.js"></script>
     <script src="scripts/stories-list/stories-list.component.js"></script>
     <script src="scripts/selected-story/selected-story.module.js"></script>
-    <script src="scripts/selected-story/selected-story.component.js"></script>
+    <script src="scripts/selected-story/selected-story.component.js"></script>-->
 </head>
 
-<body>
+<body ng-controller="StoriesController">
     <div class="modal"> 
         <!--FORM MODAL-->
         <div id="form" class="flex-section one-whole">
@@ -49,7 +50,11 @@
 
         <!--STORY MODAL-->
         <div id="story" class="flex-section one-whole">
-            <selected-story></selected-story>
+            <!--<selected-story></selected-story>-->
+
+            <div>
+                {{stories[selectedStoryID].story}}
+            </div>
         </div>
 
         <div class="modal-close">
@@ -119,9 +124,18 @@
                 <div class="flex-section palm--stack reverse content-wrapper">
                     <div class="one-half portable--one-whole">
                         <div class="stories__cards flex-section wrap no-gutter">
-                            {{$ctrl.showStoryID}}
-            
-                            <stories-list></stories-list>
+                            <!--<stories-list></stories-list>-->
+                            <div ng-repeat="story in stories | filter : { 'published' : 'True' }">
+                                <!--<div class="square one-half">-->
+                                <div class="">
+                                    <!--<div class="stories__card green">-->
+                                    <div class="green" data-storyID="{{story.id}}" ng-click="setShowStoryID(story.id)">
+                                        <div class="large-text bold uppercase">{{story.name}}</div>
+                                        <div class="small-text uppercase text-black">From {{story.location}}</div>
+                                        <div class="small-text limit-text text-black">{{story.story}}</div>
+                                    </div>
+                                </div>
+                            </div>
                             
                             <!--<div class="square ratio2_1 one-whole add-bottom-margin">
                                 <div class="stories__card white full-height">

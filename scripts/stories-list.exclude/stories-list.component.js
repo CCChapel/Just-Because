@@ -26,7 +26,7 @@ angular.module('storiesApp')
                         //Parse items
                         response.data.submissions.forEach(function(item, index) {
                             var story = {
-                                id: item.id,
+                                id: index,
                                 name: item.data[nameField].value,
                                 location: item.data[locationField].value,
                                 story: item.data[storyField].value,
@@ -38,20 +38,18 @@ angular.module('storiesApp')
                             self.stories.push(story);
                             // console.log(self.stories);
                         });
+
+                        globalVars.stories = self.stories;
                     },
                     function errorCallback(response) {
                         console.log("ERROR");
                         console.log(response);
                     });
 
-                // self.showStoryID = -1;
-                // self.setShowStoryID = function setShowStoryID(id) {
-                //     self.showStoryID = id;
-                //     console.log(id);
-                // }
-
-                console.log("LIST:" + globalVars.selectedStoryID);
-                globalVars.selectedStoryID = 10;
-                console.log("LIST:" + globalVars.selectedStoryID);
+                self.setShowStoryID = function setShowStoryID(id) {
+                    self.selectedStoryID = id;
+                    globalVars.selectedStoryID = id;
+                    console.log(globalVars.selectedStoryID);
+                }
             }
        });

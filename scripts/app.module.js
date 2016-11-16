@@ -2,7 +2,8 @@ angular.module('storiesApp', [
     'storiesList',
     'selectedStory'
 ]).value('globalVars', {
-    selectedStoryID: -1
+    selectedStoryID: -1,
+    stories: new Array()
 });
 
 // .factory('SelectedStory', function() {
