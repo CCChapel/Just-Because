@@ -68,7 +68,7 @@ angular.module('storiesApp')
 					name: item.data[nameField].value,
 					location: item.data[locationField].value,
 					story: item.data[storyField].value,
-					published: item.data[publishedField].value
+					published: item.data[publishedField].value || 'False'
 				};
 >>>>>>> 508ac4703dad597e17d9e1c74d6551decbb29012
 
