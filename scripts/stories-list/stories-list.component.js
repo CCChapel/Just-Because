@@ -40,37 +40,24 @@ angular.module('storiesApp')
                 var nameField = 47415896;
                 var locationField = 47415900;
                 var storyField = 47415901;
-		var publishedField = 47423525;
+		        var publishedField = 47423525;
 
                 //Get Submissions
                 var submissions = new Array();
-<<<<<<< HEAD
-                $http.jsonp(url, { jsonCallbackParam: 'callback' }).then(
+
+                $http.get(url, { jsonCallbackParam: 'callback' }).then(
                     function successCallback(response) {
                         console.log("SUCCESS");
-                            
+                        console.log(response);
+
                         //Parse items
-                        response.submissions.forEach(function(item, index) {
+                        response.data.submissions.forEach(function(item, index) {
                             var story = {
                                 name: item.data[nameField].value,
                                 location: item.data[locationField].value,
-                                story: item.data[storyField].value
+                                story: item.data[storyField].value,
+                                published: item.data[publishedField].value
                             };
-=======
-                $http.get(url, { jsonCallbackParam: 'callback' }).then(
-                        function successCallback(response) {
-                            console.log("SUCCESS");
-                            console.log(response);
-
-			    //Parse items
-			    response.data.submissions.forEach(function(item, index) {
-				var story = {
-					name: item.data[nameField].value,
-					location: item.data[locationField].value,
-					story: item.data[storyField].value,
-					published: item.data[publishedField].value
-				};
->>>>>>> 508ac4703dad597e17d9e1c74d6551decbb29012
 
                             console.log(story);
 
