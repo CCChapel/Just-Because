@@ -220,7 +220,9 @@
 
             //Get modal content
             var contentID = "#" + jQuery(this).attr("data-modal");
-            jQuery(this).children(contentID).show();
+            jQuery(".modal").children(contentID).show();
+
+            jQuery(".modal").fadeIn(500);
         });
 
         // jQuery(".show-modal").click(function(e) {
