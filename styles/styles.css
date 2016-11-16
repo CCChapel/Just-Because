@@ -532,6 +532,11 @@ body {
   font-size: 1.25rem;
   line-height: 1.2; }
 
+.limit-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
 .modal {
   background: rgba(54, 54, 54, 0.8);
   display: none;

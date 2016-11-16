@@ -26,3 +26,9 @@ body {
 .small-text {
     @include typecsset-font-size($font-size-small);
 }
+
+.limit-text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
