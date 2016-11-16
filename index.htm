@@ -26,10 +26,10 @@
     <link rel="stylesheet" href="styles/styles.css">
 
     <!-- JAVASCRIPT -->
-    <script
+    <!--<script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="scripts/app.js"></script>
@@ -43,13 +43,13 @@
 <body ng-controller="StoriesController">
     <div class="modal" ng-show="showModal"> 
         <!--FORM MODAL-->
-        <div id="form" class="flex-section one-whole" style="display: none;">
+        <div id="form" class="flex-section one-whole" ng-show="showModalForm">
             <script type="text/javascript" src="https://ccchapel.formstack.com/forms/js.php/just_because_card?nojquery=1&nojqueryui=1&nomodernizr=1&no_style=1&no_style_strict=1"></script>
             <script type='text/javascript'>if (typeof $ == 'undefined' && jQuery){ $ = jQuery}</script>
         </div>
 
         <!--STORY MODAL-->
-        <div id="story" class="flex-section one-whole">
+        <div id="story" class="flex-section one-whole" ng-show="showModalStory">
             <!--<selected-story></selected-story>-->
 
             <div>
@@ -57,7 +57,7 @@
             </div>
         </div>
 
-        <div class="modal-close" ng-click="closeModal()">
+        <div class="modal-close" ng-click="closeModal($event)">
             X
         </div>
     </div>
@@ -129,7 +129,7 @@
                                 <!--<div class="square one-half">-->
                                 <div class="">
                                     <!--<div class="stories__card green">-->
-                                    <div class="green" data-storyID="{{story.id}}" ng-click="setShowStoryID(story.id)">
+                                    <div class="green" data-storyID="{{story.id}}" ng-click="showStory(story.id)">
                                         <div class="large-text bold uppercase">{{story.name}}</div>
                                         <div class="small-text uppercase text-black">From {{story.location}}</div>
                                         <div class="small-text limit-text text-black">{{story.story}}</div>
@@ -174,7 +174,7 @@
                             Vestibulum interdum massa tincidunt, pellentesque felis eu, consequat felis.
                         </p>
 
-                        <a class="show-modal cta normal-text" href="#" data-modal="form">Share Yours</a>
+                        <a class="show-modal cta normal-text" href="#" ng-click="showForm()">Share Yours</a>
                     </div>
                 </div>
             </div>

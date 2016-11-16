@@ -4,6 +4,8 @@ var storiesApp = angular.module('storiesApp', []);
 //Define compenent for Story
 storiesApp.controller('StoriesController', function StoriesControler($scope, $http) {
     $scope.showModal = false;
+    $scope.showModalStory = false;
+    $scope.showModalForm = false;
 
     $scope.stories = new Array();
     
@@ -44,19 +46,31 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
             console.log(response);
         });
 
-    $scope.setShowStoryID = function setShowStoryID(id) {
-        $scope.selectedStoryID = id;
-        $scope.openModal();
-    }
+    // $scope.showStory = function showStory(id) {
+    //     $scope.openModal();
+    // }
 
     //////////////////////////////////////////////////////////
     // MODAL FUNCTIONS
     //////////////////////////////////////////////////////////
+    $scope.showStory = function showStory(id) {
+        $scope.selectedStoryID = id;
+        $scope.showModalStory = true;
+        $scope.openModal();
+    }
+
+    $scope.showForm = function showForm() {
+        $scope.showModalForm = true;
+        $scope.openModal();
+    }
+
     $scope.openModal = function openModal() {
         $scope.showModal = true;
     }
 
     $scope.closeModal = function closeModal() {
         $scope.showModal = false;
+        $scope.showModalStory = false;
+        $scope.showModalForm = false;
     }
 });
