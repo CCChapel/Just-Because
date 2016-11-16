@@ -141,6 +141,12 @@
                     "label": "Editted Story",
                     "type": "textarea",
                     "value": ""
+                },
+                "47423525": {
+                    "field": "47423525",
+                    "label": "Published",
+                    "type": "radio",
+                    "value": "False"
                 }
             }
         }
