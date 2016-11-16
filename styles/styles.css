@@ -539,7 +539,6 @@ body {
 
 .modal {
   background: rgba(54, 54, 54, 0.8);
-  display: none;
   position: absolute;
   top: 0;
   left: 0;

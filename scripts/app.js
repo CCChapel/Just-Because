@@ -3,9 +3,11 @@ var storiesApp = angular.module('storiesApp', []);
 
 //Define compenent for Story
 storiesApp.controller('StoriesController', function StoriesControler($scope, $http) {
+    $scope.showModal = false;
+
     $scope.stories = new Array();
     
-    var url = 'scripts/stories-list/stories.json';
+    var url = 'scripts/stories.json';
     //var url = 'https://www.formstack.com/api/v2/form/2530077/submission.json?data=true&oauth_token=16559620d4a936952cde88ee1070a6cc';
 
     //Field IDs
@@ -44,5 +46,7 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
 
     $scope.setShowStoryID = function setShowStoryID(id) {
         $scope.selectedStoryID = id;
+        $scope.showModal = true;
+        console.log($scope.showModal);
     }
 });
