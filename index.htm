@@ -215,7 +215,9 @@
             jQuery(".modal").fadeOut(500);
         });
 
-        jQuery(".show-modal").click(function() {
+        jQuery(".show-modal").click(function(e) {
+            e.preventDefault(); 
+            
             jQuery(".modal").fadeIn(500);
         });
     </script>
