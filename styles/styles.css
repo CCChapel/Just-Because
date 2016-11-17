@@ -271,8 +271,9 @@ $MIXINS
       right: 0;
       bottom: 0;
       left: 0;
-      -webkit-perspective-origin: 100%;
-      perspective-origin-x: 100%; }
+      /*-webkit-perspective-origin: 100%;
+      perspective-origin-x: 100%;         //Webkit fix*/
+      transform-origin-x: 100%; }
       .parallax__layer--fore {
         transform: translateZ(0);
         z-index: 1; }

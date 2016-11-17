@@ -23,8 +23,9 @@
             bottom: 0;
             left: 0;
 
-            -webkit-perspective-origin: 100%;
-            perspective-origin-x: 100%;         //Webkit fix
+            /*-webkit-perspective-origin: 100%;
+            perspective-origin-x: 100%;         //Webkit fix*/
+            transform-origin-x: 100%;           //Webkit fix
             
             &--fore {
                 transform: translateZ(0);
