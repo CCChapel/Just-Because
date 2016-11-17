@@ -86,6 +86,19 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
 
         $scope.screenLock = false;        
     }
+
+    /////////////////////////////////////////////////////////
+    // MOBILE IMAGE SELECTION
+    /////////////////////////////////////////////////////////
+    $scope.randomMobileImage = function randomMobileImage() {
+        var baseUrl = "images/groups/video/";
+        
+        //Get a random number between 1 and 4
+        var randomNumber = Math.floor((Math.random() * 4) + 1);
+
+        //Return URL to image
+        return baseUrl + "mobile" + randomNumber + ".jpg";
+    }
 });
 
 // -> Fisher–Yates shuffle algorithm

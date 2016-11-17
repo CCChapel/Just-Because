@@ -528,6 +528,11 @@ body {
 .right-justify {
   text-align: right; }
 
+.background-cover {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .object-cover {
   object-fit: cover;
   object-position: top center;
