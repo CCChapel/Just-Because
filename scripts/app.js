@@ -66,11 +66,14 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
 
     $scope.openModal = function openModal() {
         $scope.showModal = true;
+        $scope.screenLock = true;
     }
 
     $scope.closeModal = function closeModal() {
         $scope.showModal = false;
         $scope.showModalStory = false;
         $scope.showModalForm = false;
+
+        $scope.screenLock = false;        
     }
 });

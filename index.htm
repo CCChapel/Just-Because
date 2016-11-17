@@ -40,7 +40,7 @@
     <script src="scripts/selected-story/selected-story.component.js"></script>-->
 </head>
 
-<body ng-controller="StoriesController">
+<body ng-controller="StoriesController" ng-class="{ 'locked' : screenLock }">
     <div class="modal" ng-show="showModal"> 
         <!--FORM MODAL-->
         <div id="form" class="flex-section one-whole" ng-show="showModalForm">
