@@ -68,7 +68,7 @@
                     "field": "47423525",
                     "label": "Published",
                     "type": "radio",
-                    "value": "False"
+                    "value": "True"
                 }
             }
         },
@@ -146,7 +146,7 @@
                     "field": "47423525",
                     "label": "Published",
                     "type": "radio",
-                    "value": "False"
+                    "value": "True"
                 }
             }
         }
