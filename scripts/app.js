@@ -19,12 +19,15 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
     var publishedField = 47423525;
 
     //Get Submissions
-    var submissions = new Array();
+    //var submissions = new Array();
 
     $http.get(url, { jsonCallbackParam: 'callback' }).then(
         function successCallback(response) {
             // console.log("SUCCESS");
             // console.log(response);
+
+            //Shuffle Them Up
+            shuffleArray(response.data.submissions);
 
             //Parse items
             response.data.submissions.forEach(function(item, index) {
@@ -77,3 +80,21 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
         $scope.screenLock = false;        
     }
 });
+
+// -> Fisher–Yates shuffle algorithm
+var shuffleArray = function(array) {
+  var m = array.length, t, i;
+
+  // While there remain elements to shuffle
+  while (m) {
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
