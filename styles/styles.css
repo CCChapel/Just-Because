@@ -550,10 +550,22 @@ body {
   left: 0;
   z-index: 1000;
   overflow: hidden;
-  opacity: 1;
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  animation: 0.5s myChange2; }
+  .modal.ng-hide {
+    animation: 0.5s myChange; }
 
+@keyframes myChange {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes myChange {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .modal-close {
   position: absolute;
   top: 0;
