@@ -533,6 +533,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.static-image {
+  position: absolute;
+  top: 0;
+  z-index: -1; }
+
 .object-cover {
   object-fit: cover;
   object-position: top center;

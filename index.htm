@@ -80,7 +80,7 @@
     </div>
     <div class="parallax">
         <div class="video parallax__group">
-            <div class="parallax__layer parallax__layer--base background-cover" style="background-image: url({{randomMobileImage()}})">
+            <div class="parallax__layer parallax__layer--base">
                 <div class="flex-section vertical">
                     <nav class="nav-icons palm--hide">
                         <ul>
@@ -123,10 +123,12 @@
                 </div>
             </div>
 
-            <div class="parallax__layer parallax__layer--back portable--hide">
-                <video autoplay loop muted preload class="object-cover">
+            <div class="parallax__layer parallax__layer--back">
+                <video autoplay loop muted preload class="object-cover portable--hide">
                     <source class="object-cover" src="video/header.mp4" type="video/mp4">
                 </video>
+
+                <img class="object-cover static-image desk--hide" src="{{randomMobileImage()}}" />
             </div>
         </div>
 
@@ -176,11 +178,12 @@
                         </div>
 
                         <p class="large-text bold">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget aliquet libero.
+                            Sometimes people do kind things for each other. Just because.
                         </p>
 
                         <p class="normal-text">
-                            Vestibulum interdum massa tincidunt, pellentesque felis eu, consequat felis.
+                            Read on to check out some of the random acts of kindness floating around Northeast Ohio. 
+                            Were you on the receiving end of generosity? We want to hear about it!
                         </p>
 
                         <a class="show-modal cta normal-text" href="javascript:void()" ng-click="showForm()">Share Yours</a>
@@ -238,14 +241,21 @@
         <a name="why"></a>
         <div class="parallax__group">
             <div class="why parallax__layer parallax__layer--base">
-                <div class="flex-section content-wrapper">
+                <div class="flex-section content-wrapper lock-width center-by-margin">
                     <div class="one-whole">
-                        <h1>Why</h1>
+                        <p class="large-text bold uppercase">Why</p>
 
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget aliquet libero. Nunc faucibus fermentum viverra. 
-                            Vestibulum interdum massa tincidunt, pellentesque felis eu, consequat felis. Donec congue leo ut ex pretium, eu 
-                            faucibus mi iaculis.
+                        <p class="normal-text">
+                            <span class="bold">The Cause</span><br />
+                            We believe God loves us &ndash; all of us.
+                        </p>
+ 
+                        <p class="normal-text">
+                            <span class="bold">The Effect</span><br />
+                            For those of us who believe in him, it becomes tangible. An understanding of God&rsquo;s 
+                            love compels us to act. God doesn&rsquo;t withhold his affection from anyone, despite how 
+                            you may feel, act or what you think of him. It&rsquo;s the same for us &ndash; we want to, have 
+                            to, show you that you&rsquo;re known, loved and cared for, just because God made people that way.
                         </p>
                     </div>
                 </div>
