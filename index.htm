@@ -129,16 +129,11 @@
                 <div class="flex-section palm--stack reverse content-wrapper">
                     <div class="one-half portable--one-whole">
                         <div class="stories__cards flex-section wrap no-gutter">
-                            <!--<stories-list></stories-list>-->
-                            <div ng-repeat="story in stories | filter : { 'published' : 'True' }">
-                                <!--<div class="square one-half">-->
-                                <div class="">
-                                    <!--<div class="stories__card green">-->
-                                    <div class="green" data-storyID="{{story.id}}" ng-click="showStory(story.id)">
-                                        <div class="large-text bold uppercase">{{story.name}}</div>
-                                        <div class="small-text uppercase text-black">From {{story.location}}</div>
-                                        <div class="small-text limit-text text-black">{{story.story}}</div>
-                                    </div>
+                            <div class="stories__card one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' }">
+                                <div class="green" data-storyID="{{story.id}}" ng-click="showStory(story.id)">
+                                    <div class="large-text bold uppercase">{{story.name}}</div>
+                                    <div class="small-text uppercase text-black">From {{story.location}}</div>
+                                    <div class="small-text limit-text text-black">{{story.story}}</div>
                                 </div>
                             </div>
                             
