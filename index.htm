@@ -52,8 +52,13 @@
         <div id="story" class="flex-section one-whole" ng-show="showModalStory">
             <!--<selected-story></selected-story>-->
 
-            <div>
-                {{stories[selectedStoryID].story}}
+            <div class="one-whole center-by-margin content-wrapper">
+                <div class="small-text add-bottom-margin">{{stories[selectedStoryID].story}}</div>
+
+                <div class="right-justify">
+                    <div class="large-text bold uppercase">&ndash; {{stories[selectedStoryID].name}}</div>
+                    <div class="small-text uppercase">From {{stories[selectedStoryID].location}}</div>
+                </div>
             </div>
         </div>
 
