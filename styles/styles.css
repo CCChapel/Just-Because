@@ -615,12 +615,14 @@ textarea {
   width: 100%; }
 
 input[type="submit"] {
+  -webkit-appearance: none;
   background: #831c54;
   border: 2px solid #831c54 !important;
   border-radius: 4px;
   padding: .25rem;
   color: #FFF;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  cursor: pointer; }
 
 .fs-ngdialog {
   display: none; }

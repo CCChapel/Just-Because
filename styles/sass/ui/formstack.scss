@@ -38,6 +38,8 @@ textarea {
 }
 
 input[type="submit"] {
+    -webkit-appearance: none;
+    
     background: $purple;
     border: 2px solid $purple !important;
     border-radius: 4px;
@@ -45,6 +47,8 @@ input[type="submit"] {
 
     color: #FFF;
     font-size: 1.25rem;
+
+    cursor: pointer;
 }
 
 .fs-ngdialog {
