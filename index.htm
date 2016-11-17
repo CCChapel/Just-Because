@@ -41,7 +41,7 @@
 </head>
 
 <body ng-controller="StoriesController" ng-class="{ 'locked' : screenLock }">
-    <div class="modal" ng-show="showModal"> 
+    <div class="modal ng-hide" ng-show="showModal"> 
         <!--FORM MODAL-->
         <div id="form" class="flex-section one-whole" ng-show="showModalForm">
             <script type="text/javascript" src="https://ccchapel.formstack.com/forms/js.php/just_because_card?nojquery=1&nojqueryui=1&nomodernizr=1&no_style=1&no_style_strict=1"></script>
