@@ -407,7 +407,8 @@ $MIXINS
   max-width: 90vw; }
 .video .play-button {
   height: 40vh;
-  max-width: 90vw; }
+  max-width: 90vw;
+  cursor: pointer; }
 
 .stories {
   background: #831c54 url(../images/groups/stories/word-bubble-3.svg) no-repeat scroll 48vw -16vh;
