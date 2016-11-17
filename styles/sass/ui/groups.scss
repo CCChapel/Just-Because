@@ -28,6 +28,8 @@
         margin: 1rem;
         padding: 1rem;
 
+        cursor: pointer;
+
         @include flexbox;
         @include flex-flow(column nowrap);
         @include justify-content(center);

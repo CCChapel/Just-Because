@@ -447,6 +447,7 @@ $MIXINS
   .stories__card {
     margin: 1rem;
     padding: 1rem;
+    cursor: pointer;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
