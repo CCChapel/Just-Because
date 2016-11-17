@@ -410,6 +410,9 @@ $MIXINS
   height: 40vh;
   max-width: 90vw;
   cursor: pointer; }
+  @media only screen and (max-width: 1023px) {
+    .video .play-button {
+      max-width: 60vw; } }
 
 .stories {
   background: #831c54 url(../images/groups/stories/word-bubble-3.svg) no-repeat scroll 48vw -16vh;
