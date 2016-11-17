@@ -58,18 +58,19 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
     // MODAL FUNCTIONS
     //////////////////////////////////////////////////////////
     $scope.showVideo = function showVideo() {
-        $scope.showModalVideo = true;
+        $scope.template = "video";
         $scope.openModal();
     }
     
     $scope.showStory = function showStory(id) {
         $scope.selectedStoryID = id;
-        $scope.showModalStory = true;
+        $scope.template = "story";
         $scope.openModal();
     }
 
     $scope.showForm = function showForm() {
         $scope.showModalForm = true;
+        //$scope.template = "form";
         $scope.openModal();
     }
 
@@ -80,9 +81,9 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
 
     $scope.closeModal = function closeModal() {
         $scope.showModal = false;
-        $scope.showModalStory = false;
         $scope.showModalForm = false;
-        $scope.showModalVideo = false;
+
+        $scope.template = "empty";        
 
         $scope.screenLock = false;        
     }

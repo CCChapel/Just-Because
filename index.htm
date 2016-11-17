@@ -39,32 +39,13 @@
 <body ng-controller="StoriesController" ng-class="{ 'locked' : screenLock }">
     <div class="modal content-wrapper ng-hide" ng-show="showModal"> 
         <!-- VIDEO MODAL -->
-        <div id="video" class="flex-section one-whole" ng-show="showModalVideo">
-            <iframe 
-                src="https://player.vimeo.com/video/191343201?color=28708a&title=0&byline=0&portrait=0" 
-                style="width: 100%;height:100%;"
-                frameborder="0" 
-                webkitallowfullscreen 
-                mozallowfullscreen 
-                allowfullscreen></iframe>
-        </div>
+        <ng-include class="flex-section one-whole" src="template"></ng-include>
+        
 
         <!-- FORM MODAL -->
         <div id="form" class="flex-section one-whole" ng-show="showModalForm">
             <script type="text/javascript" src="https://ccchapel.formstack.com/forms/js.php/just_because_card?nojquery=1&nojqueryui=1&nomodernizr=1&no_style=1&no_style_strict=1"></script>
             <script type='text/javascript'>if (typeof $ == 'undefined' && jQuery){ $ = jQuery}</script>
-        </div>
-
-        <!-- STORY MODAL -->
-        <div id="story" class="flex-section one-whole" ng-show="showModalStory">
-            <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'green' : selectedStoryID % 3 == 0, 'white' : selectedStoryID % 3 == 1, 'blue' : selectedStoryID % 3 == 2 }">
-                <div class="small-text text-black add-bottom-margin">{{stories[selectedStoryID].story}}</div>
-
-                <div class="right-justify">
-                    <div class="large-text bold uppercase">&ndash; {{stories[selectedStoryID].name}}</div>
-                    <div class="small-text text-black uppercase">From {{stories[selectedStoryID].location}}</div>
-                </div>
-            </div>
         </div>
 
         <div class="modal-close" ng-click="closeModal($event)">
@@ -93,7 +74,7 @@
 
                     <img class="logo" src="images/logo.svg" alt="Just Because" />
 
-                    <div class="play-button flex-section vertical center" ng-click="showVideo()">
+                    <div class="play-button flex-section vertical center" ng-click="showVideo('https://player.vimeo.com/video/192021514?autoplay=1')">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 0 216 216" style="enable-background:new 0 0 216 216;" xml:space="preserve">
                         <style type="text/css">
@@ -255,5 +236,34 @@
             </div>
         </div>
     </div>
+
+    <script type="text/ng-template" id="video">
+        <iframe 
+            src="https://player.vimeo.com/video/192021514?autoplay=1" 
+            style="width: 100%; height:100%;"
+            frameborder="0" 
+            webkitallowfullscreen 
+            mozallowfullscreen 
+            allowfullscreen></iframe>
+    </script>
+
+    <!--<script type="text/ng-template" id="form">
+        <script type="text/javascript" src="https://ccchapel.formstack.com/forms/js.php/just_because_card?nojquery=1&nojqueryui=1&nomodernizr=1&no_style=1&no_style_strict=1"></script>
+        <script type='text/javascript'>if (typeof $ == 'undefined' && jQuery){ $ = jQuery}</script>
+    </scirpt>-->
+
+    <script type="text/ng-template" id="story">
+        <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'green' : selectedStoryID % 3 == 0, 'white' : selectedStoryID % 3 == 1, 'blue' : selectedStoryID % 3 == 2 }">
+            <div class="small-text text-black add-bottom-margin">{{stories[selectedStoryID].story}}</div>
+
+            <div class="right-justify">
+                <div class="large-text bold uppercase">&ndash; {{stories[selectedStoryID].name}}</div>
+                <div class="small-text text-black uppercase">From {{stories[selectedStoryID].location}}</div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="empty">
+    </script>
 </body>
 </html> 
