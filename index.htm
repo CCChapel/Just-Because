@@ -53,11 +53,13 @@
             <!--<selected-story></selected-story>-->
 
             <div class="one-whole center-by-margin content-wrapper lock-width">
-                <div class="small-text add-bottom-margin">{{stories[selectedStoryID].story}}</div>
+                <div class="stories__card" ng-class="{ 'green' : selectedStoryID % 3 == 0, 'white' : selectedStoryID % 3 == 1, 'blue' : selectedStoryID % 3 == 2 }">
+                    <div class="small-text text-black add-bottom-margin">{{stories[selectedStoryID].story}}</div>
 
-                <div class="right-justify">
-                    <div class="large-text bold uppercase">&ndash; {{stories[selectedStoryID].name}}</div>
-                    <div class="small-text uppercase">From {{stories[selectedStoryID].location}}</div>
+                    <div class="right-justify">
+                        <div class="large-text bold uppercase">&ndash; {{stories[selectedStoryID].name}}</div>
+                        <div class="small-text text-black uppercase">From {{stories[selectedStoryID].location}}</div>
+                    </div>
                 </div>
             </div>
         </div>
