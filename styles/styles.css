@@ -410,11 +410,13 @@ $MIXINS
   max-width: 90vw; }
 
 .stories {
-  background: #831c54 url(../images/groups/stories/word-bubble-3.svg) no-repeat scroll 48vw -16vh; }
-  @media only screen and (max-width: 1023px) {
-    .stories__cards {
-      margin-left: -1em;
-      width: calc(100% + 1em); } }
+  background: #831c54 url(../images/groups/stories/word-bubble-3.svg) no-repeat scroll 48vw -16vh;
+  /*&__cards {
+      @include grid-media-query("portable") {
+          margin-left: -1em;
+          width: calc(100% + 1em);
+      }
+  }*/ }
   .stories__card {
     margin: 1rem;
     padding: 1rem;
@@ -442,6 +444,10 @@ $MIXINS
     .stories__card.blue {
       background: #64c5db;
       color: white; }
+    @media only screen and (max-width: 1023px) {
+      .stories__card {
+        margin-left: 0;
+        margin-right: 0; } }
 
 .social {
   background: #64c5db url(../images/groups/social/hashtag.svg) no-repeat scroll 16vw 0;
@@ -545,7 +551,7 @@ body {
 
 .modal {
   background: rgba(54, 54, 54, 0.8);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;

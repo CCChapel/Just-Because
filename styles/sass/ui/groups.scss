@@ -17,12 +17,12 @@
 .stories {
     background: $purple url(../images/groups/stories/word-bubble-3.svg) no-repeat scroll 48vw -16vh;
 
-    &__cards {
+    /*&__cards {
         @include grid-media-query("portable") {
             margin-left: -1em;
             width: calc(100% + 1em);
         }
-    }
+    }*/
 
     &__card {
         margin: 1rem;
@@ -47,6 +47,11 @@
         &.blue {
             background: $blue;
             color: $white;
+        }
+
+        @include grid-media-query("portable") {
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 }
