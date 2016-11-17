@@ -6,6 +6,7 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
     $scope.showModal = false;
     $scope.showModalStory = false;
     $scope.showModalForm = false;
+    $scope.showModalVideo = false;
 
     $scope.stories = new Array();
     
@@ -56,6 +57,11 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
     //////////////////////////////////////////////////////////
     // MODAL FUNCTIONS
     //////////////////////////////////////////////////////////
+    $scope.showVideo = function showVideo() {
+        $scope.showModalVideo = true;
+        $scope.openModal();
+    }
+    
     $scope.showStory = function showStory(id) {
         $scope.selectedStoryID = id;
         $scope.showModalStory = true;
@@ -76,6 +82,7 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
         $scope.showModal = false;
         $scope.showModalStory = false;
         $scope.showModalForm = false;
+        $scope.showModalVideo = false;
 
         $scope.screenLock = false;        
     }
