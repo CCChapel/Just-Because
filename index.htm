@@ -34,11 +34,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
     <script src="scripts/app.js"></script>
-    <!--<script src="scripts/app.module.js"></script>
-    <script src="scripts/stories-list/stories-list.module.js"></script>
-    <script src="scripts/stories-list/stories-list.component.js"></script>
-    <script src="scripts/selected-story/selected-story.module.js"></script>
-    <script src="scripts/selected-story/selected-story.component.js"></script>-->
 </head>
 
 <body ng-controller="StoriesController" ng-class="{ 'locked' : screenLock }">
@@ -62,8 +57,6 @@
 
         <!-- STORY MODAL -->
         <div id="story" class="flex-section one-whole" ng-show="showModalStory">
-            <!--<selected-story></selected-story>-->
-
             <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'green' : selectedStoryID % 3 == 0, 'white' : selectedStoryID % 3 == 1, 'blue' : selectedStoryID % 3 == 2 }">
                 <div class="small-text text-black add-bottom-margin">{{stories[selectedStoryID].story}}</div>
 
@@ -262,30 +255,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // jQuery(document).ready(function() {
-        //     jQuery(".modal-close").click(function() {
-        //         jQuery(".modal").fadeOut(500);
-        //     });
-
-        //     jQuery("[data-modal]").click(function(e) {
-        //         e.preventDefault();
-
-        //         //Get modal content
-        //         var contentID = "#" + jQuery(this).attr("data-modal");
-        //         jQuery(".modal").children(contentID).show();
-
-        //         jQuery(".modal").fadeIn(500);
-        //     });
-        // });
-       
-
-        // jQuery(".show-modal").click(function(e) {
-        //     e.preventDefault(); 
-            
-        //     jQuery(".modal").fadeIn(500);
-        // });
-    </script>
 </body>
 </html> 
