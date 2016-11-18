@@ -88,10 +88,10 @@ h1, h2, h3, h4, h5, h6, ul, ol, dd, p, address, pre, blockquote, table {
     #BASE
 \*------------------------------------*/
 /**
- * 1. Set the base elementΓÇÖs `font-size` to the value of your choosing. Set in
+ * 1. Set the base element’s `font-size` to the value of your choosing. Set in
  *    ems, assuming a browser default of 16px.
  * 2. Work out the unitless `line-height` for your project based around your
- *    desired `line-height` (defined previously in pixels), and your projectΓÇÖs
+ *    desired `line-height` (defined previously in pixels), and your project’s
  *    base font size.
  */
 html {
@@ -151,7 +151,7 @@ li > ol {
     #PARAGRAPHS
 \*------------------------------------*/
 /**
- * Not strictly a paragraph, but probably doesnΓÇÖt need its own section.
+ * Not strictly a paragraph, but probably doesn’t need its own section.
  */
 /*------------------------------------*\
     #CODE
@@ -179,38 +179,38 @@ blockquote {
 
 /**
  * Set up quote marks on quoting elements. This is very English-based, so we are
- * using ΓÇ£, ΓÇ¥, ΓÇÿ, and ΓÇÖ quotes.
+ * using “, ”, ‘, and ’ quotes.
  */
 blockquote {
-  quotes: "ΓÇ£" "ΓÇ¥";
+  quotes: "“" "”";
   margin-left: 48px;
   margin-left: 3rem; }
   blockquote p:before {
-    content: "ΓÇ£";
+    content: "“";
     content: open-quote; }
   blockquote p:after {
     content: "";
     content: no-close-quote; }
   blockquote p:last-of-type:after {
-    content: "ΓÇ¥";
+    content: "”";
     content: close-quote; }
 
 q {
-  quotes: "ΓÇÿ" "ΓÇÖ" "ΓÇ£" "ΓÇ¥";
+  quotes: "‘" "’" "“" "”";
   /**
-   * If an element opens with an inline quote, letΓÇÖs hang that.
+   * If an element opens with an inline quote, let’s hang that.
    */ }
   q:before {
-    content: "ΓÇÿ";
+    content: "‘";
     content: open-quote; }
   q:after {
-    content: "ΓÇÖ";
+    content: "’";
     content: close-quote; }
   q q:before {
-    content: "ΓÇ£";
+    content: "“";
     content: open-quote; }
   q q:after {
-    content: "ΓÇ¥";
+    content: "”";
     content: close-quote; }
   q:first-child {
     display: inline-block;
@@ -528,6 +528,9 @@ body {
   white-space: nowrap;
   overflow: hidden; }
 
+.center {
+  text-align: center; }
+
 .right-justify {
   text-align: right; }
 
@@ -653,6 +656,37 @@ input[type="submit"] {
 
 .fs-ngdialog {
   display: none; }
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px; }
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg); }
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative; }
+
+/* hide back of pane during swap */
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: rotateY(180deg); }
+
+/* front pane, placed above back */
+.front {
+  backface-visibility: hidden;
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg); }
 
 .tagboard-embed {
   margin: 0 auto;

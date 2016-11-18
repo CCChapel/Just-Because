@@ -113,13 +113,23 @@
                     <div class="one-half portable--one-whole">
                         <div class="stories__cards content-wrapper flex-section wrap no-gutter">
                             <div class="one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' } | limitTo: 3">
-                            <div class="stories__card" ng-class="{ 'green' : $index % 3 == 0, 'white' : $index % 3 == 1, 'blue' : $index % 3 == 2 }">
-                                <div ng-click="showStory(story.id)">
-                                    <div class="large-text bold uppercase">{{story.name}}</div>
-                                    <div class="small-text uppercase text-black">From {{story.location}}</div>
-                                    <div class="small-text limit-text text-black">{{story.story}}</div>
+                                <div class="flip-container">
+                                    <div class="flipper stories__card"  ng-class="{ 'green' : $index % 3 == 0, 'white' : $index % 3 == 1, 'blue' : $index % 3 == 2 }" ng-click="showStory(story.id)">
+                                        <div class="front">
+                                            <div class="large-text bold uppercase">{{story.name}}</div>
+                                            <div class="small-text uppercase text-black">From {{story.location}}</div>
+                                            <div class="small-text limit-text text-black">{{story.story}}</div>
+                                        </div>
+
+                                        <div class="back">
+                                            <div class="flex-section">
+                                                <div class="one-whole center">
+                                                    Read the whole story
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             
                             <!--<div class="square ratio2_1 one-whole add-bottom-margin">
