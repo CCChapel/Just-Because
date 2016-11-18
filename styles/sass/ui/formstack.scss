@@ -39,16 +39,21 @@ textarea {
 
 input[type="submit"] {
     -webkit-appearance: none;
+
+    @extend .cta;
     
-    background: $purple;
-    border: 2px solid $purple !important;
-    border-radius: 4px;
-    padding: .25rem;
-
-    color: #FFF;
-    font-size: 1.25rem;
-
+    border-color: $purple;
+    background-color: transparent;
+    @include typecsset-font-size($font-size-normal);
     cursor: pointer;
+
+    // border: 2px solid $purple !important;
+    // border-radius: 4px;
+    // padding: .25rem;
+
+    // color: #FFF;
+    // font-size: 1.25rem;
+
 }
 
 .fs-ngdialog {

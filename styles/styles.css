@@ -480,7 +480,7 @@ $MIXINS
   .square.ratio2_1:before {
     margin-top: 50%; }
 
-.cta {
+.cta, input[type="submit"] {
   display: inline-block;
   border: #a8c837 solid 8px;
   padding: 1rem;
@@ -646,12 +646,11 @@ textarea {
 
 input[type="submit"] {
   -webkit-appearance: none;
-  background: #831c54;
-  border: 2px solid #831c54 !important;
-  border-radius: 4px;
-  padding: .25rem;
-  color: #FFF;
-  font-size: 1.25rem;
+  border-color: #831c54;
+  background-color: transparent;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
   cursor: pointer; }
 
 .fs-ngdialog {
