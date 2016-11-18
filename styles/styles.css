@@ -664,8 +664,10 @@ input[type="submit"] {
   perspective: 1000;
   -ms-transform: perspective(1000px);
   -moz-transform: perspective(1000px);
+  transform: perspective(1000px);
   -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d; }
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
 
 /* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -680,6 +682,7 @@ input[type="submit"] {
   -moz-transform: perspective(1000px);
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
+  transform: perspective(1000px);
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative; }
@@ -724,6 +727,7 @@ input[type="submit"] {
   /* for firefox 31 */
   -webkit-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
   z-index: 2; }
 
 .tagboard-embed {
