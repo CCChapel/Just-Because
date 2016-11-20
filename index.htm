@@ -112,7 +112,7 @@
                     <div class="one-half portable--one-whole">
                         <div class="stories__cards content-wrapper flex-section wrap no-gutter">
                             <div class="one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' } | limitTo: 3">
-                                <div class="flip-container">
+                                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                                     <div class="flipper stories__card"  ng-class="{ 'green' : $index % 3 == 0, 'white' : $index % 3 == 1, 'blue' : $index % 3 == 2 }" ng-click="showStory(story.id)">
                                         <div class="front">
                                             <div class="large-text bold uppercase">{{story.name}}</div>
