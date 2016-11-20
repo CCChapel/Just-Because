@@ -671,20 +671,20 @@ input[type="submit"] {
 
 /* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
-  transform: rotateY(180deg); }
+  transform: rotateX(180deg); }
 
 /* flip speed goes here */
 .flipper {
   -webkit-transition: 0.6s;
-  -webkit-transform-style: preserve-3d;
   -ms-transition: 0.6s;
   -moz-transition: 0.6s;
-  -moz-transform: perspective(1000px);
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
-  transform: perspective(1000px);
-  transition: 0.6s;
   transform-style: preserve-3d;
+  -moz-transform: perspective(1000px);
+  transform: perspective(1000px);
   position: relative; }
 
 .front,
@@ -694,20 +694,20 @@ input[type="submit"] {
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: 0.6s;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transform: rotateY(0deg);
   -moz-transition: 0.6s;
-  -moz-transform-style: preserve-3d;
-  -moz-transform: rotateY(0deg);
   -o-transition: 0.6s;
-  -o-transform-style: preserve-3d;
-  -o-transform: rotateY(0deg);
   -ms-transition: 0.6s;
-  -ms-transform-style: preserve-3d;
-  -ms-transform: rotateY(0deg);
   transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  transform: rotateY(0deg); }
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  transform: rotateX(0deg); }
 
 /* hide back of pane during swap */
 .back {
@@ -716,18 +716,18 @@ input[type="submit"] {
   left: 0;
   height: 100%;
   width: 100%;
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-180deg);
-  -o-transform: rotateY(-180deg);
-  -ms-transform: rotateY(-180deg);
-  transform: rotateY(-180deg); }
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  transform: rotateX(-180deg); }
 
 /* front pane, placed above back */
 .front {
   /* for firefox 31 */
-  -webkit-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  transform: rotateY(0deg);
+  -webkit-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  transform: rotateX(0deg);
   z-index: 2; }
 
 .tagboard-embed {
