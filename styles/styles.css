@@ -633,6 +633,7 @@ body {
   margin-bottom: 0.5rem; }
 
 .fsHidden,
+.fsCounter,
 .hidden {
   display: none; }
 
