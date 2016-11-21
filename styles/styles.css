@@ -607,7 +607,8 @@ body {
   cursor: pointer; }
   @media only screen and (max-width: 1023px) {
     .modal-close {
-      padding: 1rem; } }
+      padding: 1rem;
+      font-size: 1.5rem; } }
 
 .locked {
   max-height: 100vh;
