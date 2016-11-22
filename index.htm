@@ -113,7 +113,7 @@
                         <div class="stories__cards content-wrapper flex-section wrap no-gutter">
                             <div class="one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' } | limitTo: 3">
                                 <div class="flip-container">
-                                    <div class="flipper stories__card"  ng-class="{ 'green' : $index % 3 == 0, 'white' : $index % 3 == 1, 'blue' : $index % 3 == 2 }" ng-click="showStory(story.id)">
+                                    <div class="flipper stories__card"  ng-class="{ 'green' : $index % 3 == 0, 'white' : $index % 3 == 1, 'blue' : $index % 3 == 2 }" ng-click="showStory(story.id , $index)">
                                         <div class="front">
                                             <div class="large-text bold uppercase">{{story.name}}</div>
                                             <div class="small-text uppercase text-black">From {{story.location}}</div>
@@ -266,7 +266,7 @@
     </scirpt>-->
 
     <script type="text/ng-template" id="story">
-        <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'green' : selectedStoryID % 3 == 0, 'white' : selectedStoryID % 3 == 1, 'blue' : selectedStoryID % 3 == 2 }">
+        <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'green' : selectedColorIndex % 3 == 0, 'white' : selectedColorIndex % 3 == 1, 'blue' : selectedColorIndex % 3 == 2 }">
             <div class="small-text text-black add-bottom-margin">{{stories[selectedStoryID].story}}</div>
 
             <div class="right-justify">

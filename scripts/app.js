@@ -62,8 +62,9 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
         $scope.openModal();
     }
     
-    $scope.showStory = function showStory(id) {
+    $scope.showStory = function showStory(id, colorIndex) {
         $scope.selectedStoryID = id;
+        $scope.selectedColorIndex = colorIndex;
         $scope.template = "story";
         $scope.openModal();
     }
