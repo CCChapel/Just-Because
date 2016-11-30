@@ -10,21 +10,29 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
 
     $scope.stories = new Array();
     
-    var url = 'scripts/stories.json';
-    //var url = 'https://www.formstack.com/api/v2/form/2530077/submission.json?data=true&oauth_token=16559620d4a936952cde88ee1070a6cc';
+    //var url = 'scripts/stories.json';
+    var url = 'https://www.formstack.com/api/v2/form/2530077/submission.jsonp?data=true&expand_data=true&oauth_token=16559620d4a936952cde88ee1070a6cc&callback=JSON_CALLBACK';
 
     //Field IDs
     var nameField = 47415896;
     var locationField = 47415900;
     var storyField = 47415901;
+    var edittedStoryField = 47423544;
     var publishedField = 47423525;
+
+    var defaultStory = {};
+    defaultStory[nameField] = '';
+    defaultStory[locationField] = '';
+    defaultStory[storyField] = '';
+    defaultStory[edittedStoryField] = '';
+    defaultStory[publishedField] = { value : 'False' };
 
     //Get Submissions
     //var submissions = new Array();
 
-    $http.get(url, { jsonCallbackParam: 'callback' }).then(
+    $http.jsonp(url, { jsonCallbackParam: 'callback' }).then(
         function successCallback(response) {
-            // console.log("SUCCESS");
+            //console.log("SUCCESS");
             // console.log(response);
 
             //Shuffle Them Up
@@ -32,15 +40,19 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
 
             //Parse items
             response.data.submissions.forEach(function(item, index) {
+                //Combine data with defaults
+                var combinedData = jQuery.extend({}, defaultStory, item.data);
+
+                //Extract story from data
                 var story = {
                     id: index,
-                    name: item.data[nameField].value,
-                    location: item.data[locationField].value,
-                    story: item.data[storyField].value,
-                    published: item.data[publishedField].value || 'False'
+                    name: combinedData[nameField].value,
+                    location: combinedData[locationField].value,
+                    story: combinedData[storyField].value,
+                    published: combinedData[publishedField].value
                 };
 
-                // console.log(story);
+                //console.log(story);
 
                 $scope.stories.push(story);
             });
