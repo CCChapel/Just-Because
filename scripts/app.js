@@ -1,4 +1,4 @@
-//Define module
+﻿//Define module
 var storiesApp = angular.module('storiesApp', []);
 
 //Define compenent for Story
@@ -11,7 +11,7 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
     $scope.stories = new Array();
     
     //var url = 'scripts/stories.json';
-    var url = 'https://www.formstack.com/api/v2/form/2530077/submission.jsonp?data=true&expand_data=true&oauth_token=16559620d4a936952cde88ee1070a6cc&callback=JSON_CALLBACK';
+    var url = 'https://www.formstack.com/api/v2/form/2530077/submission.jsonp?search_field_0=47423525&search_value_0=True&data=true&expand_data=true&oauth_token=16559620d4a936952cde88ee1070a6cc&callback=JSON_CALLBACK';
 
     //Field IDs
     var nameField = 47415896;
