@@ -47,6 +47,9 @@
 
 <body ng-controller="StoriesController" ng-class="{ 'locked' : screenLock }">
     <div class="modal content-wrapper ng-hide" ng-show="showModal"> 
+        <!-- VIDEO MODAL -->
+        <ng-include class="flex-section one-whole" ng-hide="showModalForm" src="template"></ng-include>
+        
         <!-- FORM MODAL -->
         <div id="form" class="flex-section one-whole" ng-show="showModalForm">
             <script type="text/javascript" src="https://ccchapel.formstack.com/forms/js.php/just_because_card?nojquery=1&nojqueryui=1&nomodernizr=1&no_style=1&no_style_strict=1"></script>
@@ -104,6 +107,17 @@
             </div>
         </div>
     </div>
+    
+    <script type="text/ng-template" id="story">
+        <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'green' : selectedColorIndex % 3 == 0, 'white' : selectedColorIndex % 3 == 1, 'blue' : selectedColorIndex % 3 == 2 }">
+            <div class="small-text text-black add-bottom-margin">{{stories[selectedStoryID].story}}</div>
+
+            <div class="right-justify">
+                <div class="large-text bold uppercase">&ndash; {{stories[selectedStoryID].name}}</div>
+                <div class="small-text text-black uppercase">From {{stories[selectedStoryID].location}}</div>
+            </div>
+        </div>
+    </script>
 
     <script type="text/ng-template" id="empty">
     </script>
