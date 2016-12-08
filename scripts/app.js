@@ -49,13 +49,17 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
                     name: combinedData[nameField].value,
                     location: combinedData[locationField].value,
                     story: combinedData[storyField].value,
-                    published: combinedData[publishedField].value
+                    published: combinedData[publishedField].value,
+                    submissionId: item.id
                 };
 
                 //console.log(story);
 
                 $scope.stories.push(story);
             });
+
+            console.log(new Date());
+            console.log($scope.stories);
         },
         function errorCallback(response) {
             console.log("ERROR");

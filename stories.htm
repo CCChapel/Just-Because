@@ -85,8 +85,15 @@
             </div>
         </div>
 
+        <div>
+            <select ng-model="sort">
+                <option value="name">Alphabetical</option>
+                <option value="-submissionId">Newest First</option>
+            </select>
+        </div>
+
         <div class="stories__cards content-wrapper flex-section wrap no-gutter">
-            <div class="one-third portable--one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' }">
+            <div class="one-third portable--one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' } | orderBy : sort">
                 <div class="flip-container">
                     <div class="flipper stories__card"  ng-class="{ 'green' : $index % 3 == 0, 'white' : $index % 3 == 1, 'blue' : $index % 3 == 2 }" ng-click="showStory(story.id , $index)">
                         <div class="front">
