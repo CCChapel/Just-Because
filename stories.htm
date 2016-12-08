@@ -46,6 +46,18 @@
 </head>
 
 <body ng-controller="StoriesController" ng-class="{ 'locked' : screenLock }">
+    <div class="modal content-wrapper ng-hide" ng-show="showModal"> 
+        <!-- FORM MODAL -->
+        <div id="form" class="flex-section one-whole" ng-show="showModalForm">
+            <script type="text/javascript" src="https://ccchapel.formstack.com/forms/js.php/just_because_card?nojquery=1&nojqueryui=1&nomodernizr=1&no_style=1&no_style_strict=1"></script>
+            <script type='text/javascript'>if (typeof $ == 'undefined' && jQuery){ $ = jQuery}</script>
+        </div>
+
+        <div class="modal-close" ng-click="closeModal($event)">
+            <i class="fa fa-times fa-2x"></i>
+        </div>
+    </div>
+
     <div class="stories">
         <div class="content-wrapper">
             <div class="flex-section palm--stack">
@@ -92,6 +104,9 @@
             </div>
         </div>
     </div>
+
+    <script type="text/ng-template" id="empty">
+    </script>
 
     <!-- GOOGLE ANALYTICS -->
     <script>
