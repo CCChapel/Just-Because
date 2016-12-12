@@ -96,7 +96,7 @@
             <div class="stories__cards flex-section wrap no-gutter">
                 <div class="one-third portable--one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' } | orderBy : sort">
                     <div class="flip-container">
-                        <div class="flipper stories__card"  ng-class="{ 'green' : $index % 3 == 0, 'white' : $index % 3 == 1, 'blue' : $index % 3 == 2 }" ng-click="showStory(story.id , $index)">
+                        <div class="flipper stories__card"  ng-class="{ 'green' : story.id % 3 == 0, 'white' : story.id % 3 == 1, 'blue' : story.id % 3 == 2 }" ng-click="showStory(story.id , story.id)">
                             <div class="front">
                                 <div class="large-text bold uppercase">{{story.name}}</div>
                                 <div class="small-text uppercase text-black">From {{story.location}}</div>
