@@ -582,9 +582,10 @@ body {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  animation: 0.5s myChange2; }
+  opacity: 1;
+  transition: opacity linear 0.5s; }
   .modal.ng-hide {
-    animation: 0.5s myChange; }
+    opacity: 0; }
 
 @keyframes myChange {
   from {
