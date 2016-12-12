@@ -17,36 +17,6 @@
     &.ng-hide {
         opacity: 0;
     }
-
-    // animation: 0.5s myChange2;
-
-    // &.ng-hide {
-    //     animation: 0.5s myChange;
-    // // }
-
-    // &.animate-enter {
-    //     animation: 0.5s myChange2;
-    // }
-
-    // &.animate-enter.animate-enter-active {
-    //     animation: 0.5s myChange;
-    // }
-}
-
-@keyframes myChange {
-    from {
-        opacity: 1;
-    } to {
-        opacity: 0;
-    }
-}
-
-@keyframes myChange {
-    from {
-        opacity: 0;
-    } to {
-        opacity: 1;
-    }
 }
 
 .modal-close {
