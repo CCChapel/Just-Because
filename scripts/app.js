@@ -1,12 +1,6 @@
 ﻿//Define module
 var storiesApp = angular.module('storiesApp', ['ngAnimate']);
 
-// storiesApp.filter("trust", ['$sce', function($sce) {
-//     return function(htmlCode) {
-//         return $sce.trustAsHtml(htmlCode);
-//     }
-// }]);
-
 //Define compenent for Story
 storiesApp.controller('StoriesController', function StoriesControler($scope, $http) {
     $scope.showModal = false;
@@ -34,13 +28,8 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
     defaultStory[publishedField] = { value : 'False' };
 
     //Get Submissions
-    //var submissions = new Array();
-
     $http.jsonp(url, { jsonCallbackParam: 'callback' }).then(
         function successCallback(response) {
-            //console.log("SUCCESS");
-            // console.log(response);
-
             //Shuffle Them Up
             shuffleArray(response.data.submissions);
 
@@ -59,8 +48,6 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
                     submissionId: item.id
                 };
 
-                //console.log(story);
-
                 $scope.stories.push(story);
             });
         },
@@ -68,10 +55,6 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
             console.log("ERROR");
             console.log(response);
         });
-
-    // $scope.showStory = function showStory(id) {
-    //     $scope.openModal();
-    // }
 
     //////////////////////////////////////////////////////////
     // MODAL FUNCTIONS
@@ -157,10 +140,6 @@ var formatStory = function(story) {
         var html = "";
 
         story.forEach(function(item, index) {
-            // if (index > 0) {
-            //     html += "<br><br>";
-            // }
-
             html += "<p>" + item + "</p>";
         });
 
