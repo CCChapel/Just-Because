@@ -1,0 +1,27 @@
+@mixin transform($value: visible) {
+    -webkit-transform: $value;
+	-o-transform: $value;
+    -moz-transform: $value;
+	-ms-transform: $value;
+    transform: $value;
+}
+
+@mixin perspective($value: none) {
+    -webkit-perspective: $value;
+	-moz-perspective: $value;
+	-ms-perspective: $value;
+	perspective: $value;
+}
+
+@mixin transform-style($value: flat) {
+    -moz-transform-style: $value;
+	-ms-transform-style: $value;
+	transform-style: $value;
+}
+
+@mixin backface-visibility($value: hidden) {
+    -webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
