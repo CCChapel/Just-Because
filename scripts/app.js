@@ -1,5 +1,11 @@
 ﻿//Define module
-var storiesApp = angular.module('storiesApp', []);
+var storiesApp = angular.module('storiesApp', ['ngAnimate']);
+
+// storiesApp.filter("trust", ['$sce', function($sce) {
+//     return function(htmlCode) {
+//         return $sce.trustAsHtml(htmlCode);
+//     }
+// }]);
 
 //Define compenent for Story
 storiesApp.controller('StoriesController', function StoriesControler($scope, $http) {
@@ -48,7 +54,7 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
                     id: index,
                     name: combinedData[nameField].value,
                     location: combinedData[locationField].value,
-                    story: combinedData[storyField].value,
+                    story: formatStory(combinedData[storyField].value),
                     published: combinedData[publishedField].value,
                     submissionId: item.id
                 };
@@ -57,9 +63,6 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
 
                 $scope.stories.push(story);
             });
-
-            console.log(new Date());
-            console.log($scope.stories);
         },
         function errorCallback(response) {
             console.log("ERROR");
@@ -119,6 +122,18 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
     }
 });
 
+storiesApp.filter('html', function($sce) {
+    return function(val) {
+        return $sce.trustAsHtml(val);
+    };
+});
+
+storiesApp.filter('removeHtml', function($sce) {
+    return function(val) {
+        return $sce.trustAsHtml(removeHtml(val));
+    }
+});
+
 // -> Fisher–Yates shuffle algorithm
 var shuffleArray = function(array) {
   var m = array.length, t, i;
@@ -135,4 +150,27 @@ var shuffleArray = function(array) {
   }
 
   return array;
+}
+
+var formatStory = function(story) {
+    if (Array.isArray(story)) {
+        var html = "";
+
+        story.forEach(function(item, index) {
+            // if (index > 0) {
+            //     html += "<br><br>";
+            // }
+
+            html += "<p>" + item + "</p>";
+        });
+
+        return html;
+    }
+    else {
+        return story;
+    }
+}
+
+var removeHtml = function(html) {
+    return html.replace(/(<([^>]+)>)/ig,"");
 }
