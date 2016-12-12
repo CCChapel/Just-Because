@@ -86,10 +86,8 @@
         </div>
 
         <div>
-            <select ng-model="sort">
-                <option value="name">Alphabetical</option>
-                <option value="-submissionId">Newest First</option>
-            </select>
+            <input type="radio" name="sort" ng-model="sort" value="name" id="sortName"> <label for="sortName">Alphabetical</label>
+            <input type="radio" name="sort" ng-model="sort" value="-submissionId" id="sortDate"> <label for="sortDate">Newest First</label>
         </div>
 
         <div class="stories__cards content-wrapper flex-section wrap no-gutter">
