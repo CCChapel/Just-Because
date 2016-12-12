@@ -7,6 +7,8 @@ storiesApp.controller('StoriesController', function StoriesControler($scope, $ht
     $scope.showModalStory = false;
     $scope.showModalForm = false;
     $scope.showModalVideo = false;
+    $scope.sort = "name";
+    $scope.sortName = true;    
 
     $scope.stories = new Array();
     

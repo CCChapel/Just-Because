@@ -85,25 +85,29 @@
             </div>
         </div>
 
-        <div>
-            <input type="radio" name="sort" ng-model="sort" value="name" id="sortName"> <label for="sortName">Alphabetical</label>
-            <input type="radio" name="sort" ng-model="sort" value="-submissionId" id="sortDate"> <label for="sortDate">Newest First</label>
-        </div>
+        <div class="content-wrapper">
+            <div class="normal-text">
+                Sort: 
+                <input type="radio" name="sort" ng-model="sort" value="name" id="sortName" ng-checked="sortName"> <label for="sortName">Alphabetically</label>
+                |
+                <input type="radio" name="sort" ng-model="sort" value="-submissionId" id="sortDate"> <label for="sortDate">Newest First</label>
+            </div>
 
-        <div class="stories__cards content-wrapper flex-section wrap no-gutter">
-            <div class="one-third portable--one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' } | orderBy : sort">
-                <div class="flip-container">
-                    <div class="flipper stories__card"  ng-class="{ 'green' : $index % 3 == 0, 'white' : $index % 3 == 1, 'blue' : $index % 3 == 2 }" ng-click="showStory(story.id , $index)">
-                        <div class="front">
-                            <div class="large-text bold uppercase">{{story.name}}</div>
-                            <div class="small-text uppercase text-black">From {{story.location}}</div>
-                            <div class="small-text limit-text text-black" ng-bind-html="story.story | removeHtml"></div>
-                        </div>
+            <div class="stories__cards flex-section wrap no-gutter">
+                <div class="one-third portable--one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' } | orderBy : sort">
+                    <div class="flip-container">
+                        <div class="flipper stories__card"  ng-class="{ 'green' : $index % 3 == 0, 'white' : $index % 3 == 1, 'blue' : $index % 3 == 2 }" ng-click="showStory(story.id , $index)">
+                            <div class="front">
+                                <div class="large-text bold uppercase">{{story.name}}</div>
+                                <div class="small-text uppercase text-black">From {{story.location}}</div>
+                                <div class="small-text limit-text text-black" ng-bind-html="story.story | removeHtml"></div>
+                            </div>
 
-                        <div class="back">
-                            <div class="flex-section">
-                                <div class="one-whole center">
-                                    Read the whole story
+                            <div class="back">
+                                <div class="flex-section">
+                                    <div class="one-whole center">
+                                        Read the whole story
+                                    </div>
                                 </div>
                             </div>
                         </div>
