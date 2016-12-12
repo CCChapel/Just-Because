@@ -658,6 +658,14 @@ input[type="submit"] {
 .fs-ngdialog {
   display: none; }
 
+input[type="radio"] {
+  display: none; }
+  input[type="radio"]:checked + label {
+    font-weight: bold; }
+
+label {
+  cursor: pointer; }
+
 /* entire container, keeps perspective */
 .flip-container {
   -webkit-perspective: 1000;
