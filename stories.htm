@@ -3,7 +3,7 @@
 <html ng-app="storiesApp">
 <head lang="en">
     <!-- #METADATA -->
-    <title>JustBecauseCard.com | Sometimes people do kind things for each other. Just because.</title>
+    <title>JustBecauseStory.com | Sometimes people do kind things for each other. Just because.</title>
     
     <!-- Character Encoding -->
     <meta charset="utf-8"/>
@@ -71,13 +71,13 @@
                 </div>
 
                 <div class="one-half portable--one-whole">
-                    <p class="large-text bold">
-                        Sometimes people do kind things for each other. Just because.
+                    <p class="normal-text">
+                        <span class="bold">Sometimes people do kind things for each other. Just because.</span>
+                        Read on to check out some of the random acts of kindness floating around Northeast Ohio.
                     </p>
 
                     <p class="normal-text">
-                        Read on to check out some of the random acts of kindness floating around Northeast Ohio. 
-                        Were you on the receiving end of generosity? We want to hear about it!
+                        Or maybe you were on the receiving end of generosity. If so, we want to hear about it!
                     </p>
 
                     <a class="show-modal cta normal-text" href="javascript:void()" ng-click="showForm()">Share Yours</a>
@@ -96,7 +96,7 @@
             <div class="stories__cards flex-section wrap no-gutter">
                 <div class="one-third portable--one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' } | orderBy : sort">
                     <div class="flip-container">
-                        <div class="flipper stories__card"  ng-class="{ 'green' : story.id % 3 == 0, 'white' : story.id % 3 == 1, 'blue' : story.id % 3 == 2 }" ng-click="showStory(story.id , story.id)">
+                        <div class="flipper stories__card"  ng-class="{ 'pink' : story.id % 3 == 0, 'white' : story.id % 3 == 1, 'blue' : story.id % 3 == 2 }" ng-click="showStory(story.id , story.id)">
                             <div class="front">
                                 <div class="large-text bold uppercase">{{story.name}}</div>
                                 <div class="small-text uppercase text-black">From {{story.location}}</div>
@@ -118,7 +118,7 @@
     </div>
     
     <script type="text/ng-template" id="story">
-        <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'green' : selectedColorIndex % 3 == 0, 'white' : selectedColorIndex % 3 == 1, 'blue' : selectedColorIndex % 3 == 2 }">
+        <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'pink' : selectedColorIndex % 3 == 0, 'white' : selectedColorIndex % 3 == 1, 'blue' : selectedColorIndex % 3 == 2 }">
             <div class="small-text text-black add-bottom-margin" ng-bind-html="stories[selectedStoryID].story | html"></div>
 
             <div class="right-justify">
