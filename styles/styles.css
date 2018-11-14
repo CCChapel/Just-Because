@@ -673,6 +673,11 @@ textarea {
   font-family: Raleway, Calibri, Arial, sans serif;
   width: 100%; }
 
+input[type=file] {
+  -webkit-appearance: none;
+  border-color: #202020;
+  background-color: transparent!important; }
+
 input[type="submit"] {
   -webkit-appearance: none;
   border-color: #202020;
