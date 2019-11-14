@@ -250,10 +250,14 @@ $MIXINS
     display: none; } }
 @media only screen and (max-width: 1023px) {
   .portable--hide {
-    display: none; } }
+    display: none; } 
+  .object-cover {
+    height: 130%!important; } }
 @media only screen and (max-width: 480px) {
   .palm--hide {
-    display: none; } }
+    display: none; } 
+    .object-cover {
+      height: 100%!important; } }
 @media only screen and (min-width: 1024px) {
   .parallax {
     perspective: 1px;
@@ -263,7 +267,7 @@ $MIXINS
     perspective-origin-x: 100%; }
     .parallax__group {
       position: relative;
-      height: 100%;
+      height: 85%;
       transform-style: preserve-3d; }
     .parallax__layer {
       position: absolute;
@@ -283,7 +287,7 @@ $MIXINS
       .parallax__layer--back {
         transform: translateZ(-1px) scale(2);
         z-index: 3;
-        left: -8px; }
+        top: -80px; }
       .parallax__layer--deep {
         transform: translateZ(-600px) scale(3);
         z-index: 2; } }
@@ -388,8 +392,8 @@ $MIXINS
 
 .nav-icons {
   padding: 1rem;
-  height: 20vh;
-  width: 33%;
+  /*height: 20vh;*/
+  width: 45%;
   text-align: center; }
   .nav-icons ul {
     margin-left: 0; }
@@ -404,8 +408,9 @@ $MIXINS
   max-width: 50%; }
 
 .video .logo {
-  height: 40vh;
-  max-width: 90vw; }
+  height: 35vh;
+  max-width: 90vw;
+  min-height: 180px; }
 .video .play-button {
   height: 30vh;
   max-width: 90vw;
@@ -444,7 +449,7 @@ $MIXINS
       background: white;
       color: #77ceda; }
     .stories__card.pink {
-      background: #ef4966;
+      background: #E06950;
       color: white; }
     .stories__card.blue {
       background: #77ceda;
@@ -491,6 +496,33 @@ $MIXINS
 
 .cta:hover {
   color: #77ceda; }
+
+.cta-nav {
+  display: inline-block;
+  border: #364242 solid 0px;
+  background-color: #364242;
+  padding: 1rem;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 150px; }
+
+  .cta-alt {
+    display: inline-block;
+    border: #77ceda solid 8px;
+    background-color: #77ceda;
+    padding: 1rem;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;}
+
+.cta-nav:hover {
+  color: #DCD287; }
+
+.cta-alt:hover {
+  color: #202020; }
 
 body {
   font-family: Raleway, Calibri, Arial, sans serif;
@@ -668,7 +700,7 @@ a.juicer-button:hover {
 input[type="text"],
 textarea {
   border: 2px solid #202020 !important;
-  border-radius: 4px;
+  /*border-radius: 4px;*/
   font-size: 1.25rem;
   font-family: Raleway, Calibri, Arial, sans serif;
   width: 100%; }
@@ -680,7 +712,7 @@ input[type=file] {
 
 input[type="submit"] {
   -webkit-appearance: none;
-  border-color: #202020;
+  border-color: #77ceda;
   background-color: transparent;
   font-size: 24px;
   font-size: 1.5rem;
@@ -688,7 +720,7 @@ input[type="submit"] {
   cursor: pointer; }
 
 input[type="submit"]:hover {
-  color: #202020;
+  color: #77ceda;
 }
 
 .fs-ngdialog {
