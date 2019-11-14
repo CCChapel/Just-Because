@@ -8,10 +8,16 @@
     .portable--hide {
         display: none;
     }
+    .object-cover {
+        height: 130%!important;
+    } 
 }
 
 @include grid-media-query("palm") {
     .palm--hide {
         display: none;
-    }   
+    }
+    .object-cover {
+        height: 100%!important;
+    }
 }

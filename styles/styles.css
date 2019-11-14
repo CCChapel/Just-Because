@@ -256,8 +256,8 @@ $MIXINS
 @media only screen and (max-width: 480px) {
   .palm--hide {
     display: none; } 
-    .object-cover {
-      height: 100%!important; } }
+  .object-cover {
+    height: 100%!important; } }
 @media only screen and (min-width: 1024px) {
   .parallax {
     perspective: 1px;
@@ -508,15 +508,15 @@ $MIXINS
   text-decoration: none;
   width: 150px; }
 
-  .cta-alt {
-    display: inline-block;
-    border: #77ceda solid 8px;
-    background-color: #77ceda;
-    padding: 1rem;
-    color: white;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-decoration: none;}
+.cta-alt {
+  display: inline-block;
+  border: #77ceda solid 8px;
+  background-color: #77ceda;
+  padding: 1rem;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none; }
 
 .cta-nav:hover {
   color: #DCD287; }
