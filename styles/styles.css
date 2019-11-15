@@ -542,7 +542,8 @@ $MIXINS
 
 body {
   font-family: Raleway, Calibri, Arial, sans serif;
-  color: #ebebeb; }
+  color: white;
+  background-color:#ebebeb; }
 
 .bold {
   font-weight: 800; }
