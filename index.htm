@@ -80,14 +80,19 @@
                             <li>
                                 <a class="cta-nav normal-text" href="#about" target="_self">About</a>
                             </li>
+
+                            <li>
+                                <a class="show-modal cta-story normal-text" href="javascript:void()" ng-click="showForm()">Share Your Story</a>
+                            </li>
                         </ul>
                     </nav>
 
                     <!--<img class="logo" src="images/logo.svg" alt="Just Because" />-->
                     <div class="flex-section vertical center content-wrapper">
                         <img class="logo" src="images/logo.svg?rnd=23" alt="Just Because" />
-                        <a class="cta-alt normal-text" ng-click="showVideo('https://player.vimeo.com/video/242754256?autoplay=1')">Why did I receive this card?</a>&nbsp;
-                        <a class="show-modal cta-alt normal-text" href="javascript:void()" ng-click="showForm()">Share Your Story</a>
+                        <div class="desk--hide">
+                            <a class="show-modal cta-story normal-text" href="javascript:void()" ng-click="showForm()">Share Your Story</a>
+                        </div>
                     </div>
                     <!--<div class="play-button flex-section vertical center" ng-click="showVideo('https://player.vimeo.com/video/242754256?autoplay=1')">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -187,7 +192,7 @@
                             Or maybe you were on the receiving end of generosity. If so, we want to hear about it!
                         </p>
 
-                        <a class="show-modal cta normal-text" href="javascript:void()" ng-click="showForm()">Share Your Story</a>
+                        <a class="show-modal cta-story normal-text" href="javascript:void()" ng-click="showForm()">Share Your Story</a>
                     </div>
                 </div>
             </div>
@@ -245,8 +250,15 @@
         <a name="about"></a>
         <div class="parallax__group">
             <div class="why parallax__layer parallax__layer--base">
-                <div class="flex-section content-wrapper lock-width center-by-margin">
-                    <div class="one-whole">
+                <div class="flex-section reverse palm--stack content-wrapper">
+                    <div class="one-half portable--one-whole center">
+                            <div class="play-button flex-section vertical center" ng-click="showVideo('https://player.vimeo.com/video/192021514?autoplay=1')">
+                                <p>
+                                    <img class="one-whole" src="images/groups/video/video-image.jpg" alt="Just Because Video" />    
+                                </p>
+                            </div>
+                        </div>
+                    <div class="one-half portable--one-whole">
                         <p class="large-text bold uppercase">About</p>
 
                         <p class="normal-text">
