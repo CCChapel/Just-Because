@@ -287,7 +287,8 @@ $MIXINS
       .parallax__layer--back {
         transform: translateZ(-1px) scale(2);
         z-index: 3;
-        top: -80px; }
+        top: -80px;
+        background: #ebebeb; }
       .parallax__layer--deep {
         transform: translateZ(-600px) scale(3);
         z-index: 2; } }
@@ -394,16 +395,15 @@ $MIXINS
   padding: 1rem;
   height: 2rem;
   width: 100%;
-  text-align: center; }
+  text-align: right; }
   .nav-icons ul {
     margin-left: 0; }
     .nav-icons ul li {
       display: inline-block;
-      width: 20%;
-      vertical-align: middle; }
+      width: 100%; }
 
 .nav-icon {
-  width: 8vmin; }
+  width: 15vmin; }
 
 .group-title {
   max-width: 50%; }
@@ -530,7 +530,9 @@ $MIXINS
   text-decoration: none; }
 
 .nav {
-  color: white; }
+  color: white; 
+  text-align: right;
+  vertical-align: middle; }
 
 .cta-nav:hover {
   color: #DCD287; }
