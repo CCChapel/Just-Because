@@ -448,12 +448,12 @@ $MIXINS
     justify-content: center; }
     .stories__card.white {
       background: white;
-      color: #77ceda; }
+      color: #74C3D5; }
     .stories__card.pink {
-      background: #E06950;
+      background: #E15C59;
       color: white; }
     .stories__card.blue {
-      background: #77ceda;
+      background: #74C3D5;
       color: white; }
     @media only screen and (max-width: 1023px) {
       .stories__card {
@@ -461,11 +461,11 @@ $MIXINS
         margin-right: 0; } }
 
 .social {
-  background: #77ceda url(../images/groups/social/hashtag.svg) no-repeat scroll 16vw 0;
+  background: #74C3D5 url(../images/groups/social/hashtag.svg) no-repeat scroll 16vw 0;
   background-size: 50vh 50vw; }
 
 .why {
-  background: #ebebeb;
+  background: #D9D8D6;
   color: #202020; }
 
 .square {
@@ -488,7 +488,7 @@ $MIXINS
 
 .cta, input[type="submit"] {
   display: inline-block;
-  border: #77ceda solid 8px;
+  border: #74C3D5 solid 8px;
   padding: 1rem;
   color: white;
   font-weight: 800;
@@ -496,7 +496,7 @@ $MIXINS
   text-decoration: none; }
 
 .cta:hover {
-  color: #77ceda; }
+  color: #74C3D5; }
 
 .cta-nav {
   display: inline-block;
@@ -511,8 +511,8 @@ $MIXINS
 
 .cta-story {
   display: inline-block;
-  border: #77ceda solid 8px;
-  background-color: #77ceda;
+  border: #74C3D5 solid 8px;
+  background-color: #74C3D5;
   padding: 1rem;
   color: white;
   font-weight: 800;
@@ -645,7 +645,7 @@ body {
   right: 0;
   z-index: 1001;
   padding: 3rem;
-  color: #77ceda;
+  color: #74C3D5;
   font-size: 2.5rem;
   cursor: pointer; }
   @media only screen and (max-width: 1023px) {
@@ -661,7 +661,7 @@ body {
 a.juicer-button {
   font-family: Raleway, Calibri, Arial, sans serif;
   display: inline-block;
-  border: #77ceda solid 8px !important;
+  border: #74C3D5 solid 8px !important;
   padding: 1rem;
   color: #202020;
   font-weight: 800;
@@ -705,7 +705,7 @@ a.juicer-button:hover {
 
 .fsBody .fsForm .fsLabel {
   display: block;
-  color: #77ceda !important;
+  color: #74C3D5 !important;
   font-size: 1.25rem !important;
   margin-bottom: 0.5rem; }
 
@@ -729,7 +729,7 @@ input[type=file] {
 
 input[type="submit"] {
   -webkit-appearance: none;
-  border-color: #77ceda;
+  border-color: #74C3D5;
   background-color: transparent;
   font-size: 24px;
   font-size: 1.5rem;
@@ -737,7 +737,7 @@ input[type="submit"] {
   cursor: pointer; }
 
 input[type="submit"]:hover {
-  color: #77ceda;
+  color: #74C3D5;
 }
 
 .fs-ngdialog {
