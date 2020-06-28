@@ -511,8 +511,8 @@ $MIXINS
 
 .cta-story {
   display: inline-block;
-  border: #74C3D5 solid 8px;
-  background-color: #74C3D5;
+  border: #ffffff solid 8px;
+  /*background-color: #74C3D5;*/
   padding: 1rem;
   color: white;
   font-weight: 800;
@@ -538,7 +538,7 @@ $MIXINS
   color: #DCD287; }
 
 .cta-story:hover {
-  color: #202020; }
+  color: #74C3D5; }
 
 body {
   font-family: Raleway, Calibri, Arial, sans serif;
