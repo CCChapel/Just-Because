@@ -488,7 +488,7 @@ $MIXINS
 
 .cta, input[type="submit"] {
   display: inline-block;
-  border: #74C3D5 solid 8px;
+  border: #74C3D5 solid 4px;
   padding: 1rem;
   color: white;
   font-weight: 800;
@@ -500,7 +500,7 @@ $MIXINS
 
 .cta-nav {
   display: inline-block;
-  border: #364242 solid 8px;
+  border: #364242 solid 4px;
   background-color: #364242;
   padding: 1rem;
   color: white;
@@ -511,7 +511,7 @@ $MIXINS
 
 .cta-story {
   display: inline-block;
-  border: #ffffff solid 8px;
+  border: #ffffff solid 4px;
   /*background-color: #74C3D5;*/
   padding: 1rem;
   color: white;
@@ -661,7 +661,7 @@ body {
 a.juicer-button {
   font-family: Raleway, Calibri, Arial, sans serif;
   display: inline-block;
-  border: #74C3D5 solid 8px !important;
+  border: #74C3D5 solid 4px !important;
   padding: 1rem;
   color: #202020;
   font-weight: 800;
