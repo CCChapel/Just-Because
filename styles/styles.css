@@ -421,7 +421,7 @@ $MIXINS
       max-width: 40vw; } }
 
 .stories {
-  background: #202020 url(../images/groups/stories/word-bubble-3.svg) no-repeat scroll 48vw -16vh;
+  background: #071E24 url(../images/groups/stories/word-bubble-3.svg) no-repeat scroll 48vw -16vh;
   /*&__cards {
       @include grid-media-query("portable") {
           margin-left: -1em;
@@ -448,12 +448,12 @@ $MIXINS
     justify-content: center; }
     .stories__card.white {
       background: white;
-      color: #74C3D5; }
-    .stories__card.pink {
-      background: #E15C59;
+      color: #071E24; }
+    .stories__card.french-gray {
+      background: #BEB7A6;
       color: white; }
-    .stories__card.blue {
-      background: #74C3D5;
+    .stories__card.light-gray {
+      background: #CCCCCC;
       color: white; }
     @media only screen and (max-width: 1023px) {
       .stories__card {
@@ -461,12 +461,12 @@ $MIXINS
         margin-right: 0; } }
 
 .social {
-  background: #74C3D5 url(../images/groups/social/hashtag.svg) no-repeat scroll 16vw 0;
+  background: #BEB7A6 url(../images/groups/social/hashtag.svg) no-repeat scroll 16vw 0;
   background-size: 50vh 50vw; }
 
 .why {
-  background: #D9D8D6;
-  color: #202020; }
+  background: white;
+  color: #333333; }
 
 .square {
   position: relative;
@@ -488,15 +488,15 @@ $MIXINS
 
 .cta, input[type="submit"] {
   display: inline-block;
-  border: #74C3D5 solid 4px;
+  border: white solid 4px;
   padding: 1rem;
   color: white;
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none; }
 
-.cta:hover {
-  color: #74C3D5; }
+/*.cta:hover {
+  color: #74C3D5; }*/
 
 .cta-nav {
   display: inline-block;
@@ -541,7 +541,7 @@ $MIXINS
   color: #ffffff; }
 
 body {
-  font-family: Raleway, Calibri, Arial, sans serif;
+  font-family: "sofia-pro", sans-serif;
   color: white;
   background-color:#ebebeb; }
 
@@ -552,7 +552,11 @@ body {
   text-transform: uppercase; }
 
 .text-black {
-  color: #202020; }
+  color: #333333; }
+
+.cta.text-black {
+  border: #333333 solid 3px;
+}
 
 .large-text {
   font-size: 36px;
@@ -626,7 +630,7 @@ body {
   margin-right: auto !important; }
 
 .modal {
-  background: rgba(54, 54, 54, 0.9);
+  background: rgb(7, 30, 36);
   position: fixed;
   top: 0;
   left: 0;
@@ -645,7 +649,7 @@ body {
   right: 0;
   z-index: 1001;
   padding: 3rem;
-  color: #74C3D5;
+  color: white;
   font-size: 2.5rem;
   cursor: pointer; }
   @media only screen and (max-width: 1023px) {
@@ -659,11 +663,11 @@ body {
   overflow: hidden; }
 
 a.juicer-button {
-  font-family: Raleway, Calibri, Arial, sans serif;
+  font-family: "sofia-pro", sans-serif;
   display: inline-block;
-  border: #74C3D5 solid 4px !important;
+  border: #071E24 solid 4px !important;
   padding: 1rem;
-  color: #202020;
+  color: #071E24;
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none; }
@@ -675,13 +679,13 @@ a.juicer-button:hover {
   visibility: hidden; }
 
 .j-loading {
-    border:4px solid #202020 !important; }
+    border:4px solid #071E24 !important; }
 
 .j-loading:before {
-    background-color:#202020 !important; }
+    background-color:#071E24 !important; }
 
 .j-message p {
-  font-family: Raleway, Calibri, Arial, sans serif;
+  font-family: "sofia-pro", sans-serif;
 }
 
 .element::-webkit-scrollbar {
@@ -705,7 +709,7 @@ a.juicer-button:hover {
 
 .fsBody .fsForm .fsLabel {
   display: block;
-  color: #74C3D5 !important;
+  color: white !important;
   font-size: 1.25rem !important;
   margin-bottom: 0.5rem; }
 
@@ -716,29 +720,30 @@ a.juicer-button:hover {
 
 input[type="text"],
 textarea {
-  border: 2px solid #202020 !important;
+  border: 2px solid #333333 !important;
   /*border-radius: 4px;*/
   font-size: 1.25rem;
-  font-family: Raleway, Calibri, Arial, sans serif;
+  font-family: "sofia-pro", sans-serif;
   width: 100%; }
 
 input[type=file] {
   -webkit-appearance: none;
-  border-color: #202020;
+  border-color: #333333;
   background-color: transparent!important; }
 
 input[type="submit"] {
   -webkit-appearance: none;
-  border-color: #74C3D5;
+  border-color: white;
   background-color: transparent;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-top: 15px; }
 
-input[type="submit"]:hover {
+/*input[type="submit"]:hover {
   color: #74C3D5;
-}
+}*/
 
 .fs-ngdialog {
   display: none; }

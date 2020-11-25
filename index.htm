@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/styles.css?rnd=184">
+    <link rel="stylesheet" href="https://use.typekit.net/oqi7liw.css">
 
     <!-- JAVASCRIPT -->
     <script
@@ -119,10 +120,10 @@
             <div class="stories parallax__layer parallax__layer--base">
                 <div class="flex-section palm--stack reverse content-wrapper">
                     <div class="one-half portable--one-whole">
-                        <div class="stories__cards content-wrapper flex-section wrap no-gutter">
+                        <div class="stories__cards flex-section wrap no-gutter">
                             <div class="one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' } | limitTo: 3">
                                 <div class="flip-container">
-                                    <div class="flipper stories__card"  ng-class="{ 'blue' : $index % 3 == 0, 'white' : $index % 3 == 1, 'pink' : $index % 3 == 2 }" ng-click="showStory(story.id , $index)">
+                                    <div class="flipper stories__card"  ng-class="{ 'french-gray' : $index % 3 == 0, 'white' : $index % 3 == 1, 'light-gray' : $index % 3 == 2 }" ng-click="showStory(story.id , $index)">
                                         <div class="front">
                                             <div class="large-text bold uppercase">{{story.name}}</div>
                                             <div class="small-text uppercase text-black">From {{story.location}}</div>
@@ -151,14 +152,14 @@
                             </div>
 
                             <div class="square one-half">
-                                <div class="stories__card pink">
+                                <div class="stories__card french-gray">
                                     <div class="large-text bold uppercase">Story 2</div>
                                     <div class="small-text uppercase text-black">From {NAME}</div>
                                 </div>
                             </div>
 
                             <div class="square one-half">
-                                <div class="stories__card blue">
+                                <div class="stories__card light-gray">
                                     <div class="large-text bold uppercase">Story 3</div>
                                     <div class="small-text uppercase text-black">From {NAME}</div>
                                 </div>
@@ -168,7 +169,7 @@
         
                     <div class="one-half portable--one-whole">
                         <div class="group-title">
-                            <img class="one-whole" src="images/groups/stories/title.svg?rnd=185" alt="Stories" />
+                            <img class="one-whole add-bottom-margin" src="images/groups/stories/title.svg?rnd=185" alt="Stories" />
                         </div>
 
                         <p class="normal-text">
@@ -192,9 +193,9 @@
                 <div class="flex-section palm--stack content-wrapper">
                     <div class="one-half portable--one-whole">
                         <div class="group-title">
-                            <img class="one-whole" src="images/groups/social/title.svg?rnd=185" alt="Social" />
+                            <img class="one-whole add-bottom-margin" src="images/groups/social/title.svg?rnd=185" alt="Social" />
                             
-                            <div class="flex-section two-thirds palm--one-whole center-by-margin add-bottom-margin">
+                            <div class="flex-section two-thirds palm--one-whole add-bottom-margin">
                                 <div class="one-third">
                                     <a href="http://www.facebook.com/share.php?u=http://justbecausestory.com" target="_blank"><img src="images/icons/facebook.svg" alt="" /></a>
                                 </div>
@@ -240,11 +241,12 @@
             <div class="why parallax__layer parallax__layer--base">
                 <div class="flex-section reverse palm--stack content-wrapper">
                     <div class="one-half portable--one-whole center">
-                            <div class="play-button flex-section vertical center" ng-click="showVideo('https://player.vimeo.com/video/192021514?autoplay=1')">
+                            <!--<div class="play-button flex-section vertical center" ng-click="showVideo('https://player.vimeo.com/video/192021514?autoplay=1')">
                                 <p>
                                     <img class="one-whole" src="images/groups/video/video-image.jpg" alt="Just Because Video" />    
                                 </p>
-                            </div>
+                            </div>-->
+                            <img class="one-whole" src="images/groups/video/about-image.jpg" alt="About CCC" /> 
                         </div>
                     <div class="one-half portable--one-whole">
                         <p class="large-text bold uppercase">About</p>
@@ -283,7 +285,7 @@
     </scirpt>-->
 
     <script type="text/ng-template" id="story">
-        <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'blue' : selectedColorIndex % 3 == 0, 'white' : selectedColorIndex % 3 == 1, 'pink' : selectedColorIndex % 3 == 2 }">
+        <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'light-gray' : selectedColorIndex % 3 == 0, 'white' : selectedColorIndex % 3 == 1, 'french-gray' : selectedColorIndex % 3 == 2 }">
             <div class="small-text text-black add-bottom-margin" ng-bind-html="stories[selectedStoryID].story | html"></div>
 
             <div class="right-justify">
