@@ -88,10 +88,10 @@ h1, h2, h3, h4, h5, h6, ul, ol, dd, p, address, pre, blockquote, table {
     #BASE
 \*------------------------------------*/
 /**
- * 1. Set the base elementΓÇÖs `font-size` to the value of your choosing. Set in
+ * 1. Set the base element's `font-size` to the value of your choosing. Set in
  *    ems, assuming a browser default of 16px.
  * 2. Work out the unitless `line-height` for your project based around your
- *    desired `line-height` (defined previously in pixels), and your projectΓÇÖs
+ *    desired `line-height` (defined previously in pixels), and your project's
  *    base font size.
  */
 html {
@@ -151,7 +151,7 @@ li > ol {
     #PARAGRAPHS
 \*------------------------------------*/
 /**
- * Not strictly a paragraph, but probably doesnΓÇÖt need its own section.
+ * Not strictly a paragraph, but probably doesn't need its own section.
  */
 /*------------------------------------*\
     #CODE
@@ -288,7 +288,7 @@ $MIXINS
         transform: translateZ(-1px) scale(2);
         z-index: 3;
         top: -80px;
-        background: #ebebeb; }
+        background: #FCF8EF; }
       .parallax__layer--deep {
         transform: translateZ(-600px) scale(3);
         z-index: 2; } }
@@ -412,6 +412,7 @@ $MIXINS
   height: 35vh;
   max-width: 90vw;
   min-height: 180px; }
+
 .video .play-button {
   height: 30vh;
   max-width: 90vw;
@@ -421,13 +422,18 @@ $MIXINS
       max-width: 40vw; } }
 
 .stories {
-  background: #071E24 url(../images/groups/stories/word-bubble-3.svg) no-repeat scroll 48vw -16vh;
+  background: #002e23 url(../images/groups/stories/snow.svg) no-repeat scroll 0 -35vw;
+  background-size:cover;
   /*&__cards {
       @include grid-media-query("portable") {
           margin-left: -1em;
           width: calc(100% + 1em);
       }
   }*/ }
+
+  .green {
+    background: #002e23; }
+
   .stories__card {
     margin: 1rem 0;
     padding: 1rem;
@@ -448,13 +454,13 @@ $MIXINS
     justify-content: center; }
     .stories__card.white {
       background: white;
-      color: #071E24; }
+      color: #002e23; }
     .stories__card.french-gray {
       background: #BEB7A6;
-      color: white; }
-    .stories__card.light-gray {
-      background: #CCCCCC;
-      color: white; }
+      color: #002e23; }
+    .stories__card.cream {
+      background: #FCF8EF;
+      color: #002e23; }
     @media only screen and (max-width: 1023px) {
       .stories__card {
         margin-left: 0;
@@ -466,7 +472,7 @@ $MIXINS
 
 .why {
   background: white;
-  color: #333333; }
+  color: #002e23; }
 
 .square {
   position: relative;
@@ -500,8 +506,8 @@ $MIXINS
 
 .cta-nav {
   display: inline-block;
-  border: #364242 solid 4px;
-  background-color: #364242;
+  border: #002e23 solid 4px;
+  background-color: #002e23;
   padding: 1rem;
   color: white;
   font-weight: 800;
@@ -534,8 +540,8 @@ $MIXINS
   text-align: right;
   vertical-align: middle; }
 
-.cta-nav:hover {
-  color: #DCD287; }
+/*.cta-nav:hover {
+  color: #DCD287; }*/
 
 .cta-story:hover {
   color: #ffffff; }
@@ -543,7 +549,7 @@ $MIXINS
 body {
   font-family: "sofia-pro", sans-serif;
   color: white;
-  background-color:#ebebeb; }
+  background-color:#002e23; }
 
 .bold {
   font-weight: 800; }
@@ -552,10 +558,10 @@ body {
   text-transform: uppercase; }
 
 .text-black {
-  color: #333333; }
+  color: #002e23; }
 
 .cta.text-black {
-  border: #333333 solid 3px;
+  border: #002e23 solid 3px;
 }
 
 .large-text {
@@ -577,7 +583,7 @@ body {
 .small-text {
   font-size: 20px;
   font-size: 1.25rem;
-  line-height: 1.2; }
+  line-height: 1.4; }
 
 .limit-text {
   text-overflow: ellipsis;
@@ -630,7 +636,7 @@ body {
   margin-right: auto !important; }
 
 .modal {
-  background: rgb(7, 30, 36);
+  background: #002e23;
   position: fixed;
   top: 0;
   left: 0;
@@ -679,10 +685,10 @@ a.juicer-button:hover {
   visibility: hidden; }
 
 .j-loading {
-    border:4px solid #071E24 !important; }
+    border:4px solid #002e23 !important; }
 
 .j-loading:before {
-    background-color:#071E24 !important; }
+    background-color:#002e23 !important; }
 
 .j-message p {
   font-family: "sofia-pro", sans-serif;
@@ -720,7 +726,7 @@ a.juicer-button:hover {
 
 input[type="text"],
 textarea {
-  border: 2px solid #333333 !important;
+  border: 2px solid #002e23 !important;
   /*border-radius: 4px;*/
   font-size: 1.25rem;
   font-family: "sofia-pro", sans-serif;
@@ -728,7 +734,7 @@ textarea {
 
 input[type=file] {
   -webkit-appearance: none;
-  border-color: #333333;
+  border-color: #002e23;
   background-color: transparent!important; }
 
 input[type="submit"] {
@@ -820,7 +826,7 @@ label {
   -o-transform: rotateX(-180deg);
   -moz-transform: rotateX(-180deg);
   -ms-transform: rotateX(-180deg);
-  transform: rotateX(-180deg); }
+  transform: rotateX(-180deg);}
 
 /* front pane, placed above back */
 .front {

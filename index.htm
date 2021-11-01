@@ -125,7 +125,7 @@
                         <div class="stories__cards flex-section wrap no-gutter">
                             <div class="one-whole" ng-repeat="story in stories | filter : { 'published' : 'True' } | limitTo: 3">
                                 <div class="flip-container">
-                                    <div class="flipper stories__card"  ng-class="{ 'french-gray' : $index % 3 == 0, 'white' : $index % 3 == 1, 'light-gray' : $index % 3 == 2 }" ng-click="showStory(story.id , $index)">
+                                    <div class="flipper stories__card"  ng-class="{ 'white' : $index % 3 == 0, 'cream' : $index % 3 == 1, 'french-gray' : $index % 3 == 2 }" ng-click="showStory(story.id , $index)">
                                         <div class="front">
                                             <div class="large-text bold uppercase">{{story.name}}</div>
                                             <div class="small-text uppercase text-black">From {{story.location}}</div>
@@ -287,7 +287,7 @@
     </scirpt>-->
 
     <script type="text/ng-template" id="story">
-        <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'light-gray' : selectedColorIndex % 3 == 0, 'white' : selectedColorIndex % 3 == 1, 'french-gray' : selectedColorIndex % 3 == 2 }">
+        <div class="stories__card content-wrapper lock-width one-whole center-by-margin" ng-class="{ 'white' : selectedColorIndex % 3 == 0, 'cream' : selectedColorIndex % 3 == 1, 'french-gray' : selectedColorIndex % 3 == 2 }">
             <div class="small-text text-black add-bottom-margin" ng-bind-html="stories[selectedStoryID].story | html"></div>
 
             <div class="right-justify">
