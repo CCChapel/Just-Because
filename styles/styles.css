@@ -291,7 +291,9 @@ $MIXINS
         background: #FCF8EF; }
       .parallax__layer--deep {
         transform: translateZ(-600px) scale(3);
-        z-index: 2; } }
+        z-index: 2; } 
+      .pointer {
+        pointer-events: none;} }
 
 .flex-section {
   display: -webkit-box;
