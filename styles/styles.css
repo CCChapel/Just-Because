@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6, ul, ol, dd, p, address, pre, blockquote, table {
 
 h1, h2, h3, h4, h5, h6, ul, ol, dd, p, address, pre, blockquote, table {
   margin-bottom: 24px;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1rem; }
 
 /*------------------------------------*\
     #BASE
@@ -107,14 +107,20 @@ body {
     #HEADINGS
 \*------------------------------------*/
 h1 {
+  font-family: warnock-pro-display,serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: 48px;
   font-size: 3rem;
   line-height: 1; }
 
 h2 {
+  font-family: warnock-pro-display,serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: 36px;
   font-size: 2.25rem;
-  line-height: 1.33333; }
+  line-height: 1; }
 
 h3 {
   font-size: 30px;
@@ -354,7 +360,7 @@ $MIXINS
     .flex-section .palm--one-quarter {
       width: 25%; } }
   .flex-section:not(.vertical) > * {
-    margin-right: 20px; }
+    margin-right: 40px; }
     .flex-section:not(.vertical) > *:last-child {
       margin-right: 0; }
   .flex-section.no-gutter > * {
@@ -408,7 +414,8 @@ $MIXINS
   width: 15vmin; }
 
 .group-title {
-  max-width: 50%; }
+  max-width: 50%;
+  line-height: 1; }
 
 .video .logo {
   height: 35vh;
@@ -424,7 +431,7 @@ $MIXINS
       max-width: 40vw; } }
 
 .stories {
-  background: #002e23 url(../images/groups/stories/snow.svg) no-repeat scroll 0 -35vw;
+  background: #002e23 url(../images/groups/stories/gradientBG.png) no-repeat scroll right top;
   background-size:cover;
   /*&__cards {
       @include grid-media-query("portable") {
@@ -472,6 +479,41 @@ $MIXINS
   background: #BEB7A6 url(../images/groups/social/hashtag.svg) no-repeat scroll 16vw 0;
   background-size: 50vh 50vw; }
 
+.social .fa-stack {
+  width: 2em;
+}
+
+.social .gradient .fa-circle::before {
+  background-image: linear-gradient(240deg,#134f6a,#64c084,#00aeef);
+  background-image: url(../images/gradient.jpg);
+  background-size: 200%;
+  color: rgba(255, 255, 255, 0);
+  -webkit-background-clip: text;
+}
+
+.gradient-underline {
+  padding-bottom: 3px;
+  position: relative;
+  text-decoration: none;
+}
+
+.gradient-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  border-radius: 3px;
+  background-image: linear-gradient(240deg,#134f6a,#64c084,#00aeef);
+  background-image: url(../images/gradient.jpg);
+  background-size: 300%;
+  -webkit-animation: gradient 10s ease infinite;
+  -moz-animation: gradient 10s ease infinite;
+  -o-animation: gradient 10s ease infinite;
+  animation: gradient 10s ease infinite;
+}
+
 .why {
   background: white;
   color: #002e23; }
@@ -499,7 +541,8 @@ $MIXINS
   border: white solid 4px;
   padding: 1rem;
   color: white;
-  font-weight: 800;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none; }
 
@@ -512,7 +555,7 @@ $MIXINS
   background-color: #002e23;
   padding: 1rem;
   color: white;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   width: 150px; }
@@ -523,7 +566,7 @@ $MIXINS
   /*background-color: #74C3D5;*/
   padding: 1rem;
   color: white;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none; }
 
@@ -533,7 +576,7 @@ $MIXINS
   background-color: rgba(255, 255, 255, 0.4);
   padding: 1rem;
   color: white;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none; }
 
@@ -549,12 +592,12 @@ $MIXINS
   color: #ffffff; }
 
 body {
-  font-family: "sofia-pro", sans-serif;
+  font-family: sofia-pro, sans-serif;
   color: white;
   background-color:#002e23; }
 
 .bold {
-  font-weight: 800; }
+  font-weight: 700; }
 
 .uppercase {
   text-transform: uppercase; }
@@ -565,6 +608,16 @@ body {
 .cta.text-black {
   border: #002e23 solid 3px;
 }
+
+.extra-large-text {
+  font-size: 96px;
+  font-size: 6rem;
+  line-height: 1; }
+
+  @media only screen and (min-width: 1024px) {
+     .stories h1.extra-large-text {
+      font-size: 160px;
+      font-size: 10rem; } }
 
 .large-text {
   font-size: 36px;
@@ -671,12 +724,12 @@ body {
   overflow: hidden; }
 
 a.juicer-button {
-  font-family: "sofia-pro", sans-serif;
+  font-family: sofia-pro, sans-serif;
   display: inline-block;
   border: #071E24 solid 4px !important;
   padding: 1rem;
   color: #071E24;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none; }
 
@@ -693,7 +746,7 @@ a.juicer-button:hover {
     background-color:#002e23 !important; }
 
 .j-message p {
-  font-family: "sofia-pro", sans-serif;
+  font-family: sofia-pro, sans-serif;
 }
 
 .element::-webkit-scrollbar {
@@ -719,6 +772,7 @@ a.juicer-button:hover {
   display: block;
   color: white !important;
   font-size: 1.25rem !important;
+  font-weight: 700;
   margin-bottom: 0.5rem; }
 
 .fsHidden,
@@ -731,7 +785,7 @@ textarea {
   border: 2px solid #002e23 !important;
   /*border-radius: 4px;*/
   font-size: 1.25rem;
-  font-family: "sofia-pro", sans-serif;
+  font-family: sofia-pro, sans-serif;
   width: 100%; }
 
 input[type=file] {
@@ -851,3 +905,75 @@ label {
     
 
 /*# sourceMappingURL=styles.css.map */
+
+@-webkit-keyframes gradient {
+  0% {
+      background-position: 0% 30%
+  }
+
+  33% {
+      background-position: 30% 50%
+  }
+
+  66% {
+      background-position: 50% 30%
+  }
+
+  100% {
+      background-position: 0% 30%
+  }
+}
+
+@-moz-keyframes gradient {
+  0% {
+      background-position: 0% 30%
+  }
+
+  33% {
+      background-position: 30% 50%
+  }
+
+  66% {
+      background-position: 50% 30%
+  }
+
+  100% {
+      background-position: 0% 30%
+  }
+}
+
+@-o-keyframes gradient {
+  0% {
+      background-position: 0% 30%
+  }
+
+  33% {
+      background-position: 30% 50%
+  }
+
+  66% {
+      background-position: 50% 30%
+  }
+
+  100% {
+      background-position: 0% 30%
+  }
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 30%
+  }
+
+  33% {
+      background-position: 30% 50%
+  }
+
+  66% {
+      background-position: 50% 30%
+  }
+
+  100% {
+      background-position: 0% 30%
+  }
+}
