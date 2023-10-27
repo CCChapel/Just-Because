@@ -7,7 +7,7 @@ angular.module('storiesApp')
 		        self.stories = new Array();
                 
 		        var url = 'scripts/stories-list/stories.json';
-                //var url = 'https://www.formstack.com/api/v2/form/2530077/submission.json?data=true&oauth_token=16559620d4a936952cde88ee1070a6cc';
+                //var url = 'https://www.formstack.com/api/v2/form/2530077/submission.json?data=true&oauth_token=4761552ea4b8d1f0a5859d428bf7ccbe';
 
                 //Field IDs
                 var nameField = 47415896;
